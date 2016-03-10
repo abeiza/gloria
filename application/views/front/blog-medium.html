@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Wise Guys</title>
+	<meta name="description" content="Something awesome :D">
+	<meta name="author" content="WiseGuys">
+    
+    <!--[if lt IE 9]>
+    <link href="jackbox/css/jackbox-ie8.css" rel="stylesheet" type="text/css" />
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        
+    <!--[if gt IE 8]><link href="jackbox/css/jackbox-ie9.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="rs-plugin/css/settings.css"/>
+	<link rel="stylesheet" href="css/base.css"/>
+	<link rel="stylesheet" href="css/skeleton.css"/>
+	<link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="jackbox/css/jackbox_hovers.css"/>
+    <link rel="stylesheet" href="jackbox/css/jackbox.css"/>
+    
+    <!-- Colors -->
+	<link id="colorTheme" rel='stylesheet' href='css/colors/orangeTheme.css'/>
+    
+    
+    <!-- JS
+  ================================================== -->
+    
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/tiny.accordion.min.js"></script>
+    <script type="text/javascript" src="js/jacked.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+    <script type="text/javascript" src="js/slackBlur.min.js"></script>
+    <script type="text/javascript" src="js/ddsmoothmenu.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tweet.min.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="jackbox/js/libs/jquery.address-1.5.min.js"></script>
+    <script type="text/javascript" src="jackbox/js/jackbox-swipe.min.js"></script>
+    <script type="text/javascript" src="jackbox/js/jackbox.min.js"></script>
+    <script type="text/javascript" src="jackbox/js/libs/StackBlur.min.js"></script>
+    <script type="text/javascript" src="js/tipsy/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fitvids.min.js"></script>
+	<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    
+    
+    <script type="text/javascript" src="js/wiseguys.min.js"></script>
+
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/icons/favicon.ico">
+	<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+
+</head>
+<body style="background-color:#fff;">
+
+
+    <div class="headerBg"></div>
+    <div class="headerContentBg hidden"></div>
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<div class="container" data-backgroundImage="images/backgrounds/chair.jpg">
+    <div class="headerContentBgBoxed hidden"></div>
+    
+        
+		<header class="sixteen columns" style="height:60px;">
+        
+        <a href="index.html"><div class="logo" style="height:100%"></div></a>
+        
+                <nav class="mainmenu">
+            
+                <div id="smoothmenu" class="ddsmoothmenu">
+                
+                    <ul>
+                    <li><a href="#" class="current">HOME<span></span></a>
+                      <!--<ul>
+                        <li><a href="index.html" class="selected">TRANSPARENT SLIDER</a></li>
+                        <li><a href="index-opaque.html">OPAQUE SLIDER</a></li>
+                        <li><a href="index-flex.html">FLEX SLIDER</a></li>
+                      </ul>-->
+                    </li>
+                    
+                    <li><a href="#">COMPANY<span></span></a>
+                      <ul>
+                          <li><a href="gallery-filter-3columns.html">OUR VALUE</a>
+                             <!--<ul>
+                                <li><a href="gallery-filter-3columns.html">3 COLUMNS</a></li>
+                                <li><a href="gallery-filter-4columns.html">4 COLUMNS</a></li>
+                                <li><a href="gallery-filter-5columns.html">5 COLUMNS</a></li>
+                            </ul>-->
+                          </li>
+                          <li><a href="gallery-pagination-3columns.html">VISION AND MISSION</a>
+                             <!--<ul>
+                                <li><a href="gallery-pagination-3columns.html">3 COLUMNS</a></li>
+                                <li><a href="gallery-pagination-4columns.html">4 COLUMNS</a></li>
+                                <li><a href="gallery-pagination-5columns.html">5 COLUMNS</a></li>
+                            </ul>-->
+                          </li>
+                          <li><a href="gallery-both-3columns.html">OUR HISTORY</a>
+                             <!--<ul>
+                                <li><a href="gallery-both-3columns.html">3 COLUMNS</a></li>
+                                <li><a href="gallery-both-4columns.html">4 COLUMNS</a></li>
+                                <li><a href="gallery-both-5columns.html">5 COLUMNS</a></li>
+                            </ul>-->
+                          </li>
+                      </ul>
+                    </li>
+                    
+                    <li><a href="#">OUR BRAND<span></span></a>
+                      <ul>
+                          <li><a href="#">Purbasari</a>
+                             <!--<ul>
+                                <li><a href="portfolio-filter-3columns.html">3 COLUMNS</a></li>
+                                <li><a href="portfolio-filter-4columns.html">4 COLUMNS</a></li>
+                                <li><a href="portfolio-filter-5columns.html">5 COLUMNS</a></li>
+                            </ul>-->
+                          </li>
+                          <li><a href="#">Kanna</a>
+                             <!--<ul>
+                                <li><a href="portfolio-pagination-3columns.html">3 COLUMNS</a></li>
+                                <li><a href="portfolio-pagination-4columns.html">4 COLUMNS</a></li>
+                                <li><a href="portfolio-pagination-5columns.html">5 COLUMNS</a></li>
+                            </ul>-->
+                          </li>
+                          <li><a href="#">New Cell</a>
+                             <!--<ul>
+                                <li><a href="portfolio-both-3columns.html">3 COLUMNS</a></li>
+                                <li><a href="portfolio-both-4columns.html">4 COLUMNS</a></li>
+                                <li><a href="portfolio-both-5columns.html">5 COLUMNS</a></li>
+                            </ul>-->
+                          </li>
+                          <li><a href="#">Amara</a></li>
+						  <!--<li><a href="#">Softwhite</a></li>
+						  <li><a href="#">Freya</a></li>-->
+                      </ul>
+                      
+                    </li>
+                    
+                    <li><a href="#">NEWS<span></span></a>
+                      <!--<ul>
+                          <li><a href="blog-large.html">BLOG LARGE</a></li>
+                          <li><a href="blog-medium.html">BLOG MEDIUM</a></li>
+                          <li><a href="single-post-right-image.html">IMAGE POST</a></li>
+                          <li><a href="single-post-right-slider.html">SLIDER POST</a></li>
+                          <li><a href="single-post-right-vimeo.html">VIMEO POST</a></li>
+                          <li><a href="single-post-left-youtube.html">YOUTUBE POST</a></li>
+                          <li><a href="single-post-left-lightbox.html">LIGHTBOX POST</a></li>
+                      </ul>-->
+                    </li>
+                    
+                    <li><a href="#">CAREER<span></span></a>
+                      <!--<ul>
+                          <li><a href="feature-faq.html">FEATURE FAQ</a></li>
+                          <li><a href="typography.html">TYPOGRAPHY</a></li>
+                          <li><a href="pricing-tables.html">PRICING TABLES</a></li>
+                          <li><a href="comparisons.html">COMPARISONS</a></li>
+                          <li><a href="elements.html">ELEMENTS</a></li>
+                          <li><a href="sliders.html">SLIDERS</a></li>
+                          <li><a href="sidemenu.html">SIDE MENU</a></li>
+                          <li><a href="sitemap.html">SITEMAP</a></li>
+                      </ul>-->
+                    </li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">CONTACT US<span></span></a></li>
+                    </ul>
+                    <br style="clear: left" />
+                </div><!-- end ddsmoothmenu -->
+                
+                <!-- Responsive Menu
+                ================================================== -->
+                
+				<form action="#" method="post">
+                    <select>
+                        <option value="">Navigation</option>
+                    </select>
+				</form>
+				
+            </nav>
+            
+            <span id="menuShadow"></span>
+            <span id="submenuArrow"><span class="arrow-up"></span></span>
+        
+		</header>
+
+        
+        <!-- Header content
+        ================================================== -->
+        <!-- For data-layout, you can choose between a color background like that "#aaa", "blur" or "image" -->
+        <section id="noslider" class="sixteen columns headerContent" data-layout="blur">
+        
+            <div id="blurMask">
+                <canvas id="blurCanvas"></canvas>
+            </div>
+            
+            <div class="headerContentContainer">
+               <div class="pageTitle">The <span class="highlight">Blog</span></div>
+               <div class="breadCrumbs"><a href="index.html">Home</a> / <a href="#">Latest news</a>  / <span class="highlight">Blog</span></div>
+            </div>
+            
+        </section>
+        
+        <section class="mainContent">
+        <div class="contentBgFull"></div>
+        
+        <!-- Tag Line
+        ================================================== --
+        <section id="tagLine" class="sixteen columns row">
+            <h1>The most <span class="highlight">innovative designers</span> consciously reject the standard option box and <span class="highlight">cultivate</span> an appetite for <span class="highlight">thinking</span> wrong.</h1>
+        </section>-->
+        
+        <div id="tagLineShadow" class="sixteen columns"></div>
+        
+        <!-- Blog items - Medium
+        ================================================== -->
+        
+        <section class="sixteen columns row left-twenty">
+        
+        
+           
+           <!-- Start Blog item
+           ================================================== -->
+           <article class="blog medium row">
+                      
+              <img src="images/blog/medium_image/1.jpg" alt="" />
+                            
+              <div class="blogDate">
+                 <p>28</p>
+                 <span>Dec 2012</span>
+                 <div class="arrow-down"></div>
+              </div>
+              
+              <!-- Excerpt
+              ================================================== -->
+              <section class="excerpt">
+              
+              <div class="excerptText">
+                 <a href="single-post-right-image.html"><h2>Hello there, I am a single image post example</h2></a>
+                 <p class="blogMeta">by <a href="#">Admin</a> / in <a href="#">Photography</a> / 98 <a href="#">Comments</a></p>
+                 <p>Vivamus semper aliquet cursus. Sed non tincidunt nibh. Praesent fermentum euismod porttitor. Duis viverra fringilla nulla, sed gravida mi luctus ut. Maecenas pulvinar, sapien non eleifend suscipit, metus enim dapibus neque, vitae dapibus augue sapien sit amet lorem. Aenean purus ligula, elementum non consectetur sed, vestibulum eget odio. Vestibulum eu accumsan libero. Morbi tincidunt convallis nunc sit amet congue. Aenean venenatis nibh faucibus justo congue tincidunt. Nulla eget condimentum massa. Donec purus elit, egestas in placerat eu, consectetur non magna. Donec tempus mattis sem, sed fermentum dui imperdiet a. Sed commodo arcu a neque imperdiet cursus. Sed dictum mauris vitae purus fermentum feugiat. Nulla rhoncus rutrum tortor et elementum.</p>
+              </div>
+              
+                   <!-- buttons
+                   ================================================== -->
+                   <section class="buttons">
+                
+                     <ul class="customButtons">
+                       <li class="button readmore"><a class="highlight" href="single-post-right-image.html">Read more</a></li>
+                       <li class="separator"></li>
+                       <li class="button share" data-sliderContent=".socialShare"><a>Share</a></li>
+                     </ul>
+                     
+                      <!-- slider
+                      ================================================== -->
+                      <section class="buttonsSlider">
+                     
+                         <div class="buttonSliderShadow"></div>
+                     
+                         <article class="socialShare">
+                             <p>Please select the social network you want to share this page with:</p>
+                             <div class="addthis_toolbox_share">
+                                  <a class="addthis_button_facebook tooltip" data-tooltipText="Share it on Facebook"></a>
+                                  <a class="addthis_button_linkedin tooltip" data-tooltipText="Connect on LinkedIn"></a>
+                                  <a class="addthis_button_twitter tooltip" data-tooltipText="Share it on Twitter"></a>
+                                  <a class="addthis_button_pinterest tooltip" data-tooltipText="Pin it on Pinterest"></a>
+                                  <a class="addthis_button_digg tooltip" data-tooltipText="Digg it"></a>
+                                  <a class="addthis_button_yahoomail tooltip" data-tooltipText="Mail it with Yahoo"></a>
+                                  <a class="addthis_button_reddit tooltip" data-tooltipText="Share it on Reddit"></a>
+                                  <a class="addthis_button_stumbleupon tooltip" data-tooltipText="Share it on Stumbleupon"></a>
+                                  <a class="addthis_button_delicious tooltip" data-tooltipText="Share it on Delicious"></a>
+                                  <a class="addthis_button_email tooltip" data-tooltipText="Share via Email"></a>
+                              </div>
+                         </article>
+       
+                       <div class="buttonSliderShadowBottom"></div>
+                         <div class="buttonSliderClose"></div>
+                         
+                     </section><!-- End slider-->
+                  
+                  </section><!-- End buttons-->
+                  
+               </section><!-- End Excerpt-->
+            
+            </article><!-- End Blog item -->
+           
+           
+           <!-- Start Blog item
+           ================================================== -->
+           <article class="blog medium row">
+                      
+              <img src="images/blog/medium_image/2.jpg" alt="" />
+                            
+              <div class="blogDate">
+                 <p>07</p>
+                 <span>Dec 2012</span>
+                 <div class="arrow-down"></div>
+              </div>
+              
+              <!-- Excerpt
+              ================================================== -->
+              <section class="excerpt">
+              
+              <div class="excerptText">
+                 <a href="single-post-right-slider.html"><h2>Hey, I'm the Flex slider post example</h2></a>
+                 <p class="blogMeta">by <a href="#">Admin</a> / in <a href="#">Animation</a> / 312 <a href="#">Comments</a></p>
+                 <p>Vivamus semper aliquet cursus. Sed non tincidunt nibh. Praesent fermentum euismod porttitor. Duis viverra fringilla nulla, sed gravida mi luctus ut. Maecenas pulvinar, sapien non eleifend suscipit, metus enim dapibus neque, vitae dapibus augue sapien sit amet lorem. Aenean purus ligula, elementum non consectetur sed, vestibulum eget odio. Vestibulum eu accumsan libero. Morbi tincidunt convallis nunc sit amet congue. Aenean venenatis nibh faucibus justo congue tincidunt. Nulla eget condimentum massa. Donec purus elit, egestas in placerat eu, consectetur non magna. Donec tempus mattis sem, sed fermentum dui imperdiet a. Sed commodo arcu a neque imperdiet cursus. Sed dictum mauris vitae purus fermentum feugiat. Nulla rhoncus rutrum tortor et elementum.</p>
+              </div>
+              
+                   <!-- buttons
+                   ================================================== -->
+                   <section class="buttons">
+                
+                     <ul class="customButtons">
+                       <li class="button readmore"><a class="highlight" href="single-post-right-slider.html">Read more</a></li>
+                       <li class="separator"></li>
+                       <li class="button share" data-sliderContent=".socialShare"><a>Share</a></li>
+                     </ul>
+                     
+                      <!-- slider
+                      ================================================== -->
+                      <section class="buttonsSlider">
+                     
+                         <div class="buttonSliderShadow"></div>
+                     
+                         <article class="socialShare">
+                             <p>Please select the social network you want to share this page with:</p>
+                             <div class="addthis_toolbox_share">
+                                  <a class="addthis_button_facebook tooltip" data-tooltipText="Share it on Facebook"></a>
+                                  <a class="addthis_button_linkedin tooltip" data-tooltipText="Connect on LinkedIn"></a>
+                                  <a class="addthis_button_twitter tooltip" data-tooltipText="Share it on Twitter"></a>
+                                  <a class="addthis_button_pinterest tooltip" data-tooltipText="Pin it on Pinterest"></a>
+                                  <a class="addthis_button_digg tooltip" data-tooltipText="Digg it"></a>
+                                  <a class="addthis_button_yahoomail tooltip" data-tooltipText="Mail it with Yahoo"></a>
+                                  <a class="addthis_button_reddit tooltip" data-tooltipText="Share it on Reddit"></a>
+                                  <a class="addthis_button_stumbleupon tooltip" data-tooltipText="Share it on Stumbleupon"></a>
+                                  <a class="addthis_button_delicious tooltip" data-tooltipText="Share it on Delicious"></a>
+                                  <a class="addthis_button_email tooltip" data-tooltipText="Share via Email"></a>
+                              </div>
+                         </article>
+       
+                       <div class="buttonSliderShadowBottom"></div>
+                         <div class="buttonSliderClose"></div>
+                         
+                     </section><!-- End slider-->
+                  
+                  </section><!-- End buttons-->
+                  
+               </section><!-- End Excerpt-->
+            
+            </article><!-- End Blog item -->
+            
+            
+            
+            
+            <!-- Start Blog item
+           ================================================== -->
+           <article class="blog medium row">
+                      
+              <img src="images/blog/medium_image/3.jpg" alt="" />
+                            
+              <div class="blogDate">
+                 <p>15</p>
+                 <span>Nov 2012</span>
+                 <div class="arrow-down"></div>
+              </div>
+              
+              <!-- Excerpt
+              ================================================== -->
+              <section class="excerpt">
+              
+              <div class="excerptText">
+                 <a href="single-post-left-youtube.html"><h2>Guess what, I'm the YouTube example</h2></a>
+                 <p class="blogMeta">by <a href="#">Admin</a> / in <a href="#">Video</a> / 140 <a href="#">Comments</a></p>
+                 <p>Vivamus semper aliquet cursus. Sed non tincidunt nibh. Praesent fermentum euismod porttitor. Duis viverra fringilla nulla, sed gravida mi luctus ut. Maecenas pulvinar, sapien non eleifend suscipit, metus enim dapibus neque, vitae dapibus augue sapien sit amet lorem. Aenean purus ligula, elementum non consectetur sed, vestibulum eget odio. Vestibulum eu accumsan libero. Morbi tincidunt convallis nunc sit amet congue. Aenean venenatis nibh faucibus justo congue tincidunt. Nulla eget condimentum massa. Donec purus elit, egestas in placerat eu, consectetur non magna. Donec tempus mattis sem, sed fermentum dui imperdiet a. Sed commodo arcu a neque imperdiet cursus. Sed dictum mauris vitae purus fermentum feugiat. Nulla rhoncus rutrum tortor et elementum.</p>
+              </div>
+              
+                   <!-- buttons
+                   ================================================== -->
+                   <section class="buttons">
+                
+                     <ul class="customButtons">
+                       <li class="button readmore"><a class="highlight" href="single-post-left-youtube.html">Read more</a></li>
+                       <li class="separator"></li>
+                       <li class="button share" data-sliderContent=".socialShare"><a>Share</a></li>
+                     </ul>
+                     
+                      <!-- slider
+                      ================================================== -->
+                      <section class="buttonsSlider">
+                     
+                         <div class="buttonSliderShadow"></div>
+                     
+                         <article class="socialShare">
+                             <p>Please select the social network you want to share this page with:</p>
+                             <div class="addthis_toolbox_share">
+                                  <a class="addthis_button_facebook tooltip" data-tooltipText="Share it on Facebook"></a>
+                                  <a class="addthis_button_linkedin tooltip" data-tooltipText="Connect on LinkedIn"></a>
+                                  <a class="addthis_button_twitter tooltip" data-tooltipText="Share it on Twitter"></a>
+                                  <a class="addthis_button_pinterest tooltip" data-tooltipText="Pin it on Pinterest"></a>
+                                  <a class="addthis_button_digg tooltip" data-tooltipText="Digg it"></a>
+                                  <a class="addthis_button_yahoomail tooltip" data-tooltipText="Mail it with Yahoo"></a>
+                                  <a class="addthis_button_reddit tooltip" data-tooltipText="Share it on Reddit"></a>
+                                  <a class="addthis_button_stumbleupon tooltip" data-tooltipText="Share it on Stumbleupon"></a>
+                                  <a class="addthis_button_delicious tooltip" data-tooltipText="Share it on Delicious"></a>
+                                  <a class="addthis_button_email tooltip" data-tooltipText="Share via Email"></a>
+                              </div>
+                         </article>
+       
+                       <div class="buttonSliderShadowBottom"></div>
+                         <div class="buttonSliderClose"></div>
+                         
+                     </section><!-- End slider-->
+                  
+                  </section><!-- End buttons-->
+                  
+               </section><!-- End Excerpt-->
+            
+            </article><!-- End Blog item -->
+            
+            
+            <!-- Start Blog item
+           ================================================== -->
+           <article class="blog medium row">
+                      
+              <img src="images/blog/medium_image/8.jpg" alt="" />
+                            
+              <div class="blogDate">
+                 <p>08</p>
+                 <span>Nov 2012</span>
+                 <div class="arrow-down"></div>
+              </div>
+              
+              <!-- Excerpt
+              ================================================== -->
+              <section class="excerpt">
+              
+              <div class="excerptText">
+                 <a href="single-post-right-vimeo.html"><h2>Click me, click me, I'm the Vimeo post</h2></a>
+                 <p class="blogMeta">by <a href="#">Admin</a> / in <a href="#">Video</a> / 78 <a href="#">Comments</a></p>
+                 <p>Vivamus semper aliquet cursus. Sed non tincidunt nibh. Praesent fermentum euismod porttitor. Duis viverra fringilla nulla, sed gravida mi luctus ut. Maecenas pulvinar, sapien non eleifend suscipit, metus enim dapibus neque, vitae dapibus augue sapien sit amet lorem. Aenean purus ligula, elementum non consectetur sed, vestibulum eget odio. Vestibulum eu accumsan libero. Morbi tincidunt convallis nunc sit amet congue. Aenean venenatis nibh faucibus justo congue tincidunt. Nulla eget condimentum massa. Donec purus elit, egestas in placerat eu, consectetur non magna. Donec tempus mattis sem, sed fermentum dui imperdiet a. Sed commodo arcu a neque imperdiet cursus. Sed dictum mauris vitae purus fermentum feugiat. Nulla rhoncus rutrum tortor et elementum.</p>
+              </div>
+              
+                   <!-- buttons
+                   ================================================== -->
+                   <section class="buttons">
+                
+                     <ul class="customButtons">
+                       <li class="button readmore"><a class="highlight" href="single-post-right-vimeo.html">Read more</a></li>
+                       <li class="separator"></li>
+                       <li class="button share" data-sliderContent=".socialShare"><a>Share</a></li>
+                     </ul>
+                     
+                      <!-- slider
+                      ================================================== -->
+                      <section class="buttonsSlider">
+                     
+                         <div class="buttonSliderShadow"></div>
+                     
+                         <article class="socialShare">
+                             <p>Please select the social network you want to share this page with:</p>
+                             <div class="addthis_toolbox_share">
+                                  <a class="addthis_button_facebook tooltip" data-tooltipText="Share it on Facebook"></a>
+                                  <a class="addthis_button_linkedin tooltip" data-tooltipText="Connect on LinkedIn"></a>
+                                  <a class="addthis_button_twitter tooltip" data-tooltipText="Share it on Twitter"></a>
+                                  <a class="addthis_button_pinterest tooltip" data-tooltipText="Pin it on Pinterest"></a>
+                                  <a class="addthis_button_digg tooltip" data-tooltipText="Digg it"></a>
+                                  <a class="addthis_button_yahoomail tooltip" data-tooltipText="Mail it with Yahoo"></a>
+                                  <a class="addthis_button_reddit tooltip" data-tooltipText="Share it on Reddit"></a>
+                                  <a class="addthis_button_stumbleupon tooltip" data-tooltipText="Share it on Stumbleupon"></a>
+                                  <a class="addthis_button_delicious tooltip" data-tooltipText="Share it on Delicious"></a>
+                                  <a class="addthis_button_email tooltip" data-tooltipText="Share via Email"></a>
+                              </div>
+                         </article>
+       
+                       <div class="buttonSliderShadowBottom"></div>
+                         <div class="buttonSliderClose"></div>
+                         
+                     </section><!-- End slider-->
+                  
+                  </section><!-- End buttons-->
+                  
+               </section><!-- End Excerpt-->
+            
+            </article><!-- End Blog item -->
+           
+           
+           <!-- Start Blog item
+           ================================================== -->
+           <article class="blog medium row">
+                      
+              <img src="images/blog/medium_image/7.jpg" alt="" />
+                            
+              <div class="blogDate">
+                 <p>15</p>
+                 <span>Oct 2012</span>
+                 <div class="arrow-down"></div>
+              </div>
+              
+              <!-- Excerpt
+              ================================================== -->
+              <section class="excerpt">
+              
+              <div class="excerptText">
+                 <a href="single-post-left-lightbox.html"><h2>Ahoy there, I'm the lighbox example</h2></a>
+                 <p class="blogMeta">by <a href="#">Admin</a> / in <a href="#">Media</a> / 54 <a href="#">Comments</a></p>
+                 <p>Vivamus semper aliquet cursus. Sed non tincidunt nibh. Praesent fermentum euismod porttitor. Duis viverra fringilla nulla, sed gravida mi luctus ut. Maecenas pulvinar, sapien non eleifend suscipit, metus enim dapibus neque, vitae dapibus augue sapien sit amet lorem. Aenean purus ligula, elementum non consectetur sed, vestibulum eget odio. Vestibulum eu accumsan libero. Morbi tincidunt convallis nunc sit amet congue. Aenean venenatis nibh faucibus justo congue tincidunt. Nulla eget condimentum massa. Donec purus elit, egestas in placerat eu, consectetur non magna. Donec tempus mattis sem, sed fermentum dui imperdiet a. Sed commodo arcu a neque imperdiet cursus. Sed dictum mauris vitae purus fermentum feugiat. Nulla rhoncus rutrum tortor et elementum.</p>
+              </div>
+              
+                   <!-- buttons
+                   ================================================== -->
+                   <section class="buttons">
+                
+                     <ul class="customButtons">
+                       <li class="button readmore"><a class="highlight" href="single-post-left-lightbox.html">Read more</a></li>
+                       <li class="separator"></li>
+                       <li class="button share" data-sliderContent=".socialShare"><a>Share</a></li>
+                     </ul>
+                     
+                      <!-- slider
+                      ================================================== -->
+                      <section class="buttonsSlider">
+                     
+                         <div class="buttonSliderShadow"></div>
+                     
+                         <article class="socialShare">
+                             <p>Please select the social network you want to share this page with:</p>
+                             <div class="addthis_toolbox_share">
+                                  <a class="addthis_button_facebook tooltip" data-tooltipText="Share it on Facebook"></a>
+                                  <a class="addthis_button_linkedin tooltip" data-tooltipText="Connect on LinkedIn"></a>
+                                  <a class="addthis_button_twitter tooltip" data-tooltipText="Share it on Twitter"></a>
+                                  <a class="addthis_button_pinterest tooltip" data-tooltipText="Pin it on Pinterest"></a>
+                                  <a class="addthis_button_digg tooltip" data-tooltipText="Digg it"></a>
+                                  <a class="addthis_button_yahoomail tooltip" data-tooltipText="Mail it with Yahoo"></a>
+                                  <a class="addthis_button_reddit tooltip" data-tooltipText="Share it on Reddit"></a>
+                                  <a class="addthis_button_stumbleupon tooltip" data-tooltipText="Share it on Stumbleupon"></a>
+                                  <a class="addthis_button_delicious tooltip" data-tooltipText="Share it on Delicious"></a>
+                                  <a class="addthis_button_email tooltip" data-tooltipText="Share via Email"></a>
+                              </div>
+                         </article>
+       
+                       <div class="buttonSliderShadowBottom"></div>
+                         <div class="buttonSliderClose"></div>
+                         
+                     </section><!-- End slider-->
+                  
+                  </section><!-- End buttons-->
+                  
+               </section><!-- End Excerpt-->
+            
+            </article><!-- End Blog item -->
+            
+            
+            
+            
+            <!-- Start Blog item
+           ================================================== -->
+           <article class="blog medium row">
+                      
+              <img src="images/blog/medium_image/4.jpg" alt="" />
+                            
+              <div class="blogDate">
+                 <p>24</p>
+                 <span>Oct 2012</span>
+                 <div class="arrow-down"></div>
+              </div>
+              
+              <!-- Excerpt
+              ================================================== -->
+              <section class="excerpt">
+              
+              <div class="excerptText">
+                 <a href="#"><h2>Suspendi braus es vicat farus metis</h2></a>
+                 <p class="blogMeta">by <a href="#">Admin</a> / in <a href="#">Web development</a> / 114 <a href="#">Comments</a></p>
+                 <p>Vivamus semper aliquet cursus. Sed non tincidunt nibh. Praesent fermentum euismod porttitor. Duis viverra fringilla nulla, sed gravida mi luctus ut. Maecenas pulvinar, sapien non eleifend suscipit, metus enim dapibus neque, vitae dapibus augue sapien sit amet lorem. Aenean purus ligula, elementum non consectetur sed, vestibulum eget odio. Vestibulum eu accumsan libero. Morbi tincidunt convallis nunc sit amet congue. Aenean venenatis nibh faucibus justo congue tincidunt. Nulla eget condimentum massa. Donec purus elit, egestas in placerat eu, consectetur non magna. Donec tempus mattis sem, sed fermentum dui imperdiet a. Sed commodo arcu a neque imperdiet cursus. Sed dictum mauris vitae purus fermentum feugiat. Nulla rhoncus rutrum tortor et elementum.</p>
+              </div>
+              
+                   <!-- buttons
+                   ================================================== -->
+                   <section class="buttons">
+                
+                     <ul class="customButtons">
+                       <li class="button readmore"><a class="highlight" href="#">Read more</a></li>
+                       <li class="separator"></li>
+                       <li class="button share" data-sliderContent=".socialShare"><a>Share</a></li>
+                     </ul>
+                     
+                      <!-- slider
+                      ================================================== -->
+                      <section class="buttonsSlider">
+                     
+                         <div class="buttonSliderShadow"></div>
+                     
+                         <article class="socialShare">
+                             <p>Please select the social network you want to share this page with:</p>
+                             <div class="addthis_toolbox_share">
+                                  <a class="addthis_button_facebook tooltip" data-tooltipText="Share it on Facebook"></a>
+                                  <a class="addthis_button_linkedin tooltip" data-tooltipText="Connect on LinkedIn"></a>
+                                  <a class="addthis_button_twitter tooltip" data-tooltipText="Share it on Twitter"></a>
+                                  <a class="addthis_button_pinterest tooltip" data-tooltipText="Pin it on Pinterest"></a>
+                                  <a class="addthis_button_digg tooltip" data-tooltipText="Digg it"></a>
+                                  <a class="addthis_button_yahoomail tooltip" data-tooltipText="Mail it with Yahoo"></a>
+                                  <a class="addthis_button_reddit tooltip" data-tooltipText="Share it on Reddit"></a>
+                                  <a class="addthis_button_stumbleupon tooltip" data-tooltipText="Share it on Stumbleupon"></a>
+                                  <a class="addthis_button_delicious tooltip" data-tooltipText="Share it on Delicious"></a>
+                                  <a class="addthis_button_email tooltip" data-tooltipText="Share via Email"></a>
+                              </div>
+                         </article>
+						 
+						 
+						 
+
+       
+                       <div class="buttonSliderShadowBottom"></div>
+                         <div class="buttonSliderClose"></div>
+                         
+                     </section><!-- End slider-->
+                  
+                  </section><!-- End buttons-->
+                  
+               </section><!-- End Excerpt-->
+            
+            </article><!-- End Blog item -->
+			
+			
+			
+			
+			
+			
+            <!-- Start Blog item
+           ================================================== -->
+           <article class="blog medium row">
+                      
+              <img src="images/blog/medium_image/5.jpg" alt="" />
+                            
+              <div class="blogDate">
+                 <p>17</p>
+                 <span>Sep 2012</span>
+                 <div class="arrow-down"></div>
+              </div>
+              
+              <!-- Excerpt
+              ================================================== -->
+              <section class="excerpt">
+              
+              <div class="excerptText">
+                 <a href="#"><h2>Lorem ipsum sit amet faeris velitulat est</h2></a>
+                 <p class="blogMeta">by <a href="#">Admin</a> / in <a href="#">Animation</a> / 52 <a href="#">Comments</a></p>
+                 <p>Vivamus semper aliquet cursus. Sed non tincidunt nibh. Praesent fermentum euismod porttitor. Duis viverra fringilla nulla, sed gravida mi luctus ut. Maecenas pulvinar, sapien non eleifend suscipit, metus enim dapibus neque, vitae dapibus augue sapien sit amet lorem. Aenean purus ligula, elementum non consectetur sed, vestibulum eget odio. Vestibulum eu accumsan libero. Morbi tincidunt convallis nunc sit amet congue. Aenean venenatis nibh faucibus justo congue tincidunt. Nulla eget condimentum massa. Donec purus elit, egestas in placerat eu, consectetur non magna. Donec tempus mattis sem, sed fermentum dui imperdiet a. Sed commodo arcu a neque imperdiet cursus. Sed dictum mauris vitae purus fermentum feugiat. Nulla rhoncus rutrum tortor et elementum.</p>
+              </div>
+              
+                   <!-- buttons
+                   ================================================== -->
+                   <section class="buttons">
+                
+                     <ul class="customButtons">
+                       <li class="button readmore"><a class="highlight" href="#">Read more</a></li>
+                       <li class="separator"></li>
+                       <li class="button share" data-sliderContent=".socialShare"><a>Share</a></li>
+                     </ul>
+                     
+                      <!-- slider
+                      ================================================== -->
+                      <section class="buttonsSlider">
+                     
+                         <div class="buttonSliderShadow"></div>
+                     
+                         <article class="socialShare">
+                             <p>Please select the social network you want to share this page with:</p>
+                             <div class="addthis_toolbox_share">
+                                  <a class="addthis_button_facebook tooltip" data-tooltipText="Share it on Facebook"></a>
+                                  <a class="addthis_button_linkedin tooltip" data-tooltipText="Connect on LinkedIn"></a>
+                                  <a class="addthis_button_twitter tooltip" data-tooltipText="Share it on Twitter"></a>
+                                  <a class="addthis_button_pinterest tooltip" data-tooltipText="Pin it on Pinterest"></a>
+                                  <a class="addthis_button_digg tooltip" data-tooltipText="Digg it"></a>
+                                  <a class="addthis_button_yahoomail tooltip" data-tooltipText="Mail it with Yahoo"></a>
+                                  <a class="addthis_button_reddit tooltip" data-tooltipText="Share it on Reddit"></a>
+                                  <a class="addthis_button_stumbleupon tooltip" data-tooltipText="Share it on Stumbleupon"></a>
+                                  <a class="addthis_button_delicious tooltip" data-tooltipText="Share it on Delicious"></a>
+                                  <a class="addthis_button_email tooltip" data-tooltipText="Share via Email"></a>
+                              </div>
+                         </article>
+						 
+						 
+						 
+
+       
+                       <div class="buttonSliderShadowBottom"></div>
+                         <div class="buttonSliderClose"></div>
+                         
+                     </section><!-- End slider-->
+                  
+                  </section><!-- End buttons-->
+                  
+               </section><!-- End Excerpt-->
+            
+            </article><!-- End Blog item -->
+            
+            
+            
+           
+           <!-- Pagination
+           ================================================== -->
+           <section class="pagination clearfix row">
+              <ul>
+                  <li><a href="#">previous</a></li>
+                  <li class="selected">1</li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">next</a></li>
+              </ul>
+            </section> <!-- #pagination -->
+        
+           
+
+
+        </section><!-- End twelve columns -->
+
+        
+       
+        <div class="clearfix"></div>
+        
+        </section><!-- End // main content -->
+
+
+        
+        <footer style="background-color:#8dc43f;margin-top:-35px;">
+			<!--<div class="footerBgFull" styLe="background-color:#8dc43f"></div>-->
+			<div style="padding:20px;background-color:#8dc43f;">
+				<div style="width:50%; float:left;text-align:left;">
+					<span style="color:#fff;">Copyright &copy;2015 | PT Gloria Origita Cosmetics</span>
+				</div>
+				<div style="width:50%; background-color:#8dc43f; float:left; margin:0px; padding-bottom:20px;text-align:right;font-size:11px">
+					<span style="padding:20px 10px;"><strong>PRIVACY POLICY</strong></span>
+					<span style="padding:20px 10px;"><strong>FAQ</strong></span>
+					<span style="padding:20px 10px;"><strong>OUR CONTACT</strong></span>
+				</div>
+			</div>
+		</footer>
+        
+		
+
+	</div><!-- container -->
+
+
+<!-- End Document
+================================================== -->
+
+<!-- Add this javascript
+================================================== -->
+
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-506aac2b00929782"></script>
+
+<link rel="stylesheet" href="styleswitcher/switcher.css">
+<script src="styleswitcher/switcher.js"></script>
+
+</body>
+</html>
