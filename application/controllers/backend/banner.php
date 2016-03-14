@@ -712,6 +712,70 @@
 				Header("Location:".base_url()."index.php/backend/banner/content_add/".$id_parent);
 			}
 		}
+		
+		function search(){
+			if($this->input->post('search') != ''){
+				$sess['search_banner'] = $this->input->post('search');
+			}
+
+			$this->session->set_userdata($sess);
+			$search = $this->db->query("select * from gocweb_banner where banner_desc like '%".$this->session->userdata('search_banner')."%' or banner_title like '%".$this->session->userdata('search_banner')."%'");
+			$page = $this->uri->segment(5);
+			$limit = 5;
+			
+			if(!$page){
+				$offset = 0;
+			}else{
+				$offset = $page;
+			}
+			
+			//$user = $this->model_back->get_data('gocweb_user');
+			$config['total_rows'] = $search->num_rows();
+			$config['base_url'] = base_url()."index.php/backend/manage_banner/search/index/";
+			$config['per_page'] = $limit;
+			$config['uri_segment'] = 5;
+			$config['full_tag_open'] = "<div class='pagination'><ul>";
+			$config['full_tag_close'] = "</ul></div>";
+			
+			$config['next_link'] = "Next <i class='fa fa-angle-right'></i>";
+			$config['next_tag_open'] = "<li>";
+			$config['next_tag_close'] = "</li>";
+			
+			$config['prev_link'] = "<i class='fa fa-angle-left'></i> Prev";
+			$config['prev_tag_open'] = "<li>";
+			$config['prev_tag_close'] = "</li>";
+			
+			$config['first_link'] = "<span class='paging-arrow'><i class='fa fa-angle-double-left'></i> First</span>";
+			$config['first_tag_open'] = "<li>";
+			$config['first_tag_close'] = "</li>";
+			
+			$config['last_link'] = "<span class='paging-arrow'>Last <i class='fa fa-angle-double-right'></i></span>";
+			$config['last_tag_open'] = "<li>";
+			$config['last_tag_close'] = "</li>";
+
+			$config['cur_tag_open'] = "<li><span class='active'>";//active
+			$config['cur_tag_close'] = "</span></li>";
+			
+			$config['num_tag_open'] = "<li>";
+			$config['num_tag_close'] = "</li>";
+			
+			$config['num_links'] = 3;
+			
+			$this->pagination->initialize($config);
+			$data['paging'] = $this->pagination->create_links();
+			
+			//$data['user_grid'] = $this->model_back->get_data_limit('gocweb_user',$limit,$offset);
+			$data['banner_grid'] = $this->db->query("select * from gocweb_banner where banner_desc like '%".$this->session->userdata('search_banner')."%' or banner_title like '%".$this->session->userdata('search_banner')."%' LIMIT ".$limit." OFFSET ".$offset."");
+			$data['limit'] = $limit;
+			$data['of'] = $search->num_rows();
+			
+			$this->load->view('back/others/top');
+			$this->load->view('back/others/left_side');
+			$this->load->view('back/others/top-header');
+			$this->load->view('back/banner/view',$data);
+			$this->load->view('back/others/bottom');
+		}
+
 	}
 
 /*End of file banner.php*/

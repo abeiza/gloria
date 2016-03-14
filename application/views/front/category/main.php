@@ -11,6 +11,10 @@
         
         <!-- Blog items - Medium
         ================================================== -->
+		<div style="text-align:center;height:180px;">
+			<h1>Listing Post</h1>
+			<span>Check headline posting in our directory.</span>
+		</div>
         
         <section class="sixteen columns row left-twenty">
         
@@ -35,14 +39,14 @@
 						$y = substr($ct->post_date_create,0,4);
 						$m = substr(date('F', mktime(0, 0, 0, substr($ct->post_date_create,5,2), 10)),0,3);
 						$d = substr($ct->post_date_create,8,2);
-						echo "<p>".$d."</p>";
-						echo "<span>".$m.' '.$y."</span>";
+						echo "<p style=''>".$d."</p>";
+						echo "<span style=''>".$m.' '.$y."</span>";
 					}else{
 						$y = substr($ct->post_date_update,0,4);
 						$m = substr(date('F', mktime(0, 0, 0, substr($ct->post_date_update,5,2), 10)),0,3);
 						$d = substr($ct->post_date_update,8,2);
-						echo "<p>".$d."</p>";
-						echo "<span>".$m.' '.$y."</span>";
+						echo "<p style=''>".$d."</p>";
+						echo "<span style=''>".$m.' '.$y."</span>";
 					}
 				?>
                  <div class="arrow-down"></div>
@@ -63,7 +67,7 @@
                    <section class="buttons">
                 
                      <ul class="customButtons">
-                       <li class="button readmore"><a class="highlight" href="<?php echo base_url().'index.php/home/post/single/'.$ct->post_id;?>">Read more</a></li>
+                       <li class="button readmore"><a style="font-size:14px" class="highlight" href="<?php echo base_url().'index.php/home/post/single/'.$ct->post_id;?>">Read more</a></li>
                      </ul>
                      
                   </section><!-- End buttons-->

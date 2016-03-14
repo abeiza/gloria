@@ -15,7 +15,7 @@
 			$id = $this->uri->segment(4);
 			
 			$page = $this->uri->segment(5);
-			$limit = 5;
+			$limit = 3;
 			if(!$page){
 				$offset = 0;
 			}else{

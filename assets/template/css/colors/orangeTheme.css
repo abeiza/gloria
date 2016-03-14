@@ -176,7 +176,10 @@ select:focus, input:focus, textarea:focus{
 }
 
 .highlight {
-    color: #8dc43f;
+    color: #fff;
+	font-size:34px;
+	text-align:left;
+	margin:0px;
 }
 
 ::selection {
@@ -209,7 +212,8 @@ select:focus, input:focus, textarea:focus{
 
 
 .ddsmoothmenu ul li ul li a:hover {
-    color: #000;
+    color: #fff;
+	font-weight:bold;
 	background: #8dc43f;
 }
 

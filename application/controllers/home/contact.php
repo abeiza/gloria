@@ -17,7 +17,7 @@
 				$header['logo'] = $db->setting_logo;
 			}
 			$this->load->view('front/others/header',$header);
-			$this->load->view('front/contact/header_title');
+			//$this->load->view('front/contact/header_title');
 			$query = $this->db->query('select * from gocweb_contact');
 			foreach($query->result() as $db){
 				$data['email'] = $db->contact_email;

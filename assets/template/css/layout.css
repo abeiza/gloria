@@ -34,6 +34,7 @@
   float: left;
   padding-bottom: 60px;
   background: #fff;
+  width:100%;
 }
 
 
@@ -164,11 +165,12 @@ nav form select{
     width: 100%;
     height: 16px;
     float: left;
-    top: 60px;
+    top: 80px;
     left: 0px;
     z-index: 1;
     background: url('../images/headerShadow.png') no-repeat left top;
     background-size: 100% auto;
+	z-index:9999;
 }
 
 #menuShadow-side {
@@ -200,7 +202,7 @@ nav form select{
     width: 108px;
     height: 9px;
     position: absolute;
-    top: 51px;
+    top: 71px;
     left: 0;
     z-index: 101;
     opacity: 0;
@@ -208,6 +210,7 @@ nav form select{
     pointer-events: none;
     border-bottom: 3px solid white;
 	cursor: pointer;
+	z-index:99999
 }
 
 
@@ -252,7 +255,7 @@ margin-top: 3px;
 }
 
 .ddsmoothmenu ul{
-z-index:100;
+z-index:999999;
 margin: 0;
 padding: 0;
 list-style-type: none;
@@ -276,15 +279,26 @@ text-align: center;
  margin-top: 0;
 }
 
+@font-face {
+  font-family: "Raleway-bold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("https://fonts.gstatic.com/s/raleway/v10/JbtMzqLaYbbbCL9X6EvaI_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 /*Top level menu link items style*/
 .ddsmoothmenu ul li a{
+font-family:'Raleway-bold';
 display: block;
 background: #ffffff; /*background of menu items (default state)*/
-color: #aaaaaa;
-padding: 25px 20px 15px 20px;
+color: #323232;
+padding: 35px 20px 25px 20px;
 text-decoration: none;
 height: 20px;
 text-align:center;
+font-size:12px;
+font-weight:bold;
 }
 
 * html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
@@ -294,7 +308,7 @@ color: #aaaaaa;
 
 .ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{
 background: #fff;
-color: #aaa;
+color: #323232;
 
 -webkit-transition: color 0.2s ease-out, background 0.2s ease-out;
 -moz-transition: color 0.2s ease-out, background 0.2s ease-out; 
@@ -361,7 +375,7 @@ margin-top: 0;
 
 /* Sub level menu links style */
 .ddsmoothmenu ul li ul li a{
-font: 12px 'CabinSemiBold', sans-serif;
+font: 12px 'Raleway-bold', sans-serif;
 font-weight: normal;
 width: 145px; /*width of sub menus*/
 padding: 13px 5px 5px 20px;
@@ -372,8 +386,8 @@ text-align:left;
 }
 
 .ddsmoothmenu ul li ul li a:link, .ddsmoothmenu ul li ul li a:visited{
-color: #8dc43f;
-
+font-family:'Raleway-bold';
+color: #999;
 -webkit-transition: color 0.2s ease-out, background 0.2s ease-out;
 -moz-transition: color 0.2s ease-out, background 0.2s ease-out; 
 -o-transition: color 0.2s ease-out, background 0.2s ease-out; 
@@ -446,7 +460,7 @@ opacity: 0.8;
 #noslider{
 	position: relative;
     width: 1000px;
-    height: 200px;
+    height: 150px;
     overflow: hidden;
 }
 
@@ -462,21 +476,35 @@ opacity: 0.8;
 	background-color: rgba(255,255,255,.5);	
 }
 
+.headerContentContainer:before{
+	content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+	background: #8dc43f;
+	opacity:0.5;
+}
 
 .headerContentContainer{
 	width:1000px;
-	height: 200px;
-	margin: 0 auto;
+	height: 150px;
+	padding-left:5%;
     position: absolute;
     float: left;
-	text-align: center;
+	text-align: left;
 	color: #000;
-	background-color: #fff;
-	background-color: rgba(255,255,255,.5);
+	//background-color: #fff;
+	//background-color: rgba(255,255,255,.5);
 
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 
     filter: alpha(opacity=50);
+	background-image:url("http://localhost/goc_website/assets/header.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 	
 }
 .breadCrumbs{
@@ -499,7 +527,7 @@ opacity: 0.8;
 	font-size: 60px; 
 	line-height: 68px; 
 	margin-bottom: 4px;
-	margin-top: 64px;
+	margin-top: 34px;
 	font-family: 'CabinRegular', sans-serif;
 	position: relative;
 }
@@ -577,8 +605,10 @@ opacity: 0.8;
 
 #tagLine {
     position: relative;
-    padding: 0px 20px 17px 20px;
+    padding: 0px;
     text-align: center;
+	width:100%;
+	margin-bottom:40px;
 }
 
 #tagLine h1{
@@ -1025,7 +1055,7 @@ margin-top: 4px;
 ================================================== */
 
 #acc {
-    width: 225px;
+    //width: 225px;
     list-style: none;
 	margin-top: 14px;
 }
@@ -1035,7 +1065,7 @@ margin-top: 4px;
 }
 
 #acc h4 {
-    width: 183px;
+    //width: 183px;
     height: 28px;
     color: #aaa;
     border: 1px solid #ddd;
@@ -1071,7 +1101,7 @@ margin-top: 4px;
 }
 
 #acc .acc-content {
-    width: 203px;
+//width: 203px;
     padding: 10px;
     border: 1px solid #aaa;
     background: #fff;
@@ -3394,7 +3424,7 @@ input[type="radio"] {
 
 .carouselWrapper .blog li .blogDate {
     width: 60px;
-    height: 50px;
+    height: 52px;
     position: absolute;
     left: 0px;
 	text-align: center;
@@ -3742,7 +3772,7 @@ input[type="radio"] {
 
 .blog.medium .blogDate {
     width: 60px;
-    height: 50px;
+    height: 60px;
     position: absolute;
     left: 189px;
 }
@@ -3799,7 +3829,7 @@ input[type="radio"] {
 }
 
 .blog.medium .blogDate .arrow-down {
-    top: 1px;
+    top: 0px;
     left: 24px;
 }
 
@@ -3820,7 +3850,7 @@ input[type="radio"] {
 }
 .blog.post .blogDate {
     width: 60px;
-    height: 46px;
+    height: 50px;
     position: relative;
     text-align: center;
     padding-top: 4px;

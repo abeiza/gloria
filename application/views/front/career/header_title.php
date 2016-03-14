@@ -6,14 +6,11 @@
             <div id="blurMask">
                 <canvas id="blurCanvas"></canvas>
             </div>
-			<div class="headerContentContainer">
-            <?php 
-				foreach($query->result() as $tt){?>
-					<div class="pageTitle"><span class="highlight" style="color:#fff;"><?php echo $tt->page_category_name?></span></div>
-					<!--<div class="breadCrumbs"><a href="index.html">Home</a> / <a href="#">Latest news</a>  / <a href="#">Blog</a>  / <span class="highlight">Lorem ipsum</span></div>-->
-				<?php
-				}
-			?>
+           
+            <div class="headerContentContainer">
+               <div class="pageTitle"><span class="highlight">Career</span></div>
+               <!--<div class="breadCrumbs"><a href="index.html">Home</a> / <a href="#">Latest news</a>  / <a href="#">Blog</a>  / <span class="highlight">Lorem ipsum</span></div>-->
 			</div>
+				
             
         </section>

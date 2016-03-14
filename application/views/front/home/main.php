@@ -18,21 +18,21 @@
         <section class="row offset-by-one">
         
                 <div class="onethird" style="text-align:center;transition:all 0.3s ease-out 0s;">
-					<i class="fa fa-eye fa-3x" style="width:100%; text-align:center;float:left;padding:10px 0px;"></i>
-                    <span style="width:100%; font-size:24px;float:left;margin-top:20px;">OUR VALUE</span>
-                    <span style="padding:20px;float:left; text-align:justify;"><?php echo $moto;?></span>
+					<i class="fa fa-eye fa-3x" style="width:100%; text-align:center;float:left;padding:10px 0px;color:#666;"></i>
+                    <span style="width:100%; font-size:24px;float:left;margin-top:20px;color:#666;">Our Value</span>
+                    <span style="padding:20px;float:left; text-align:center;"><?php echo $moto;?></span>
 				</div>
                 
                 <div class="onethird" style="text-align:center;transition:all 0.3s ease-out 0s;">
-                    <i class="fa fa-quote-right fa-3x" style="width:100%; text-align:center;float:left;padding:10px 0px;"></i>
-					<span style="width:100%; font-size:24px;float:left;margin-top:20px;">OUR MOTTO</span>
-                    <span style="padding:20px;float:left; text-align:justify;"><?php echo $visi;?></span>
+                    <i class="fa fa-quote-right fa-3x" style="width:100%; text-align:center;color:#666;float:left;padding:10px 0px;"></i>
+					<span style="width:100%; font-size:24px;float:left;margin-top:20px;color:#666;">Our Moto</span>
+                    <span style="padding:20px;float:left; text-align:center;"><?php echo $visi;?></span>
                 </div>
                 
                 <div class="onethird last" style="text-align:center;transition:all 0.3s ease-out 0s;">
-					<i class="fa fa-rocket fa-3x" style="width:100%; text-align:center;float:left;padding:10px 0px;"></i>
-                    <span style="width:100%; font-size:24px;float:left;margin-top:20px;">VISION AND MISSION</span>
-                    <span style="padding:20px;float:left; text-align:justify;"><?php echo $misi;?></span>
+					<i class="fa fa-rocket fa-3x" style="width:100%; text-align:center;color:#666;float:left;padding:10px 0px;"></i>
+                    <span style="width:100%; font-size:24px;float:left;margin-top:20px;color:#666;">Vision and Mission</span>
+                    <span style="padding:20px;float:left; text-align:center;"><?php echo $misi;?></span>
 				</div>
 				<span id="menuShadow-side" style="position:relative;margin-top:-16px;top:70px;"></span>
 			<!--<div><img style="margin-top:40px; width:auto;" src="images/header_shadow.png"/></div>-->
@@ -45,7 +45,7 @@
 			</div>
 			<!---->
 		</section>
-        <span id="menuShadow-center" style="position:relative;margin-top:-16px;top:15px;"></span>
+        <span id="menuShadow-center" style="position:relative;margin-top:-16px;top:14px;"></span>
         <!--<div><img style="position:absolute;z-index:9999" src="images/header_shadow.png"/></div>-->
         </section><!-- End // main content -->
         

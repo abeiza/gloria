@@ -181,6 +181,9 @@
 						</ul>
 					  </li>
 					  <hr style="border-color:#7f7f7f;"/>
+					  <li style="margin-top:20px; margin-bottom:20px;">
+						<a style="text-decoration:none;color:#fff;" href="<?php echo base_url();?>index.php/backend/manage_career"><span class="fa fa-briefcase" style="margin-right:10px;color:#fff"></span><span>Career</span></a>
+					  </li>
 					  <li>
 						<input type="checkbox" checked>
 						<i></i>

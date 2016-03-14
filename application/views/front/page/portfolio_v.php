@@ -3,17 +3,19 @@
         
         <!-- Tag Line
         ================================================== -->
-        <section id="tagLine" class="sixteen columns row">
+        <section id="tagLine" style="margin-bottom:0px" class="sixteen columns row">
            
         </section>
         
         <div id="tagLineShadow" class="sixteen columns"></div>
-         
+        <div style="text-align:center;height:180px;">
+			<h1>Product Catalogue</h1>
+			<span>Check the best product avaialable in our directory.</span>
+		</div>
         <!-- Isotope container
         ================================================== -->
 
         <section class="isotopeContainer portfolio left-twenty">
-        
 					<?php if($query->num_rows() == 0) {?>
 					
 					<h3>No Result</h3>

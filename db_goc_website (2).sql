@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2016 at 11:15 AM
+-- Generation Time: Mar 14, 2016 at 07:11 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS `gocweb_banner` (
 --
 
 INSERT INTO `gocweb_banner` (`banner_id`, `banner_title`, `banner_desc`, `banner_url`, `banner_background`, `banner_date_modify`) VALUES
-('BNR0001', 'Banner 1', 'Banner', 'http://localhost/goc_website/index.php/home/post/single/1', '1.jpg', '2016-02-24 15:55:29'),
-('BNR0002', 'Banner 2', 'banner', 'http://localhost/goc_website/index.php/home/post/single/2', '2.jpg', '2016-02-24 15:57:47'),
-('BNR0003', 'Banner 3', 'banner', 'http://localhost/goc_website/index.php/home/post/single/3', '3.jpg', '2016-02-24 15:58:07');
+('BNR0001', 'Banner 1', 'Banner', 'http://localhost/goc_website/index.php/home/post/single/1', '11.jpg', '2016-03-11 10:36:12'),
+('BNR0002', 'Banner 2', 'banner', 'http://localhost/goc_website/index.php/home/post/single/2', '21.jpg', '2016-03-11 10:36:33'),
+('BNR0003', 'Banner 3', 'banner', 'http://localhost/goc_website/index.php/home/post/single/3', '31.jpg', '2016-03-11 10:36:46');
 
 -- --------------------------------------------------------
 
@@ -72,6 +72,41 @@ INSERT INTO `gocweb_banner_content` (`banner_content_id`, `banner_contect_parent
 (7, 'BNR0003', 'text31.png', 'caption lfb', 350, 180, 900, 1000, 'easeOutExpo'),
 (8, 'BNR0001', 'text4.png', 'caption lfr', 500, 150, 900, 900, 'easeOutExpo'),
 (12, 'BNR0001', 'text53.png', 'caption lfb', 490, 200, 900, 1000, 'easeOutExpo');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gocweb_career`
+--
+
+CREATE TABLE IF NOT EXISTS `gocweb_career` (
+  `Career_Id` varchar(30) NOT NULL DEFAULT '',
+  `Career_Title` varchar(30) DEFAULT NULL,
+  `Career_Departmen` enum('IT Department','Finance & Accounting Department','HR Department','Marketing Department','Production Department','R n d Department','QA Department','SCM Department','General') DEFAULT NULL,
+  `Career_Location` varchar(30) DEFAULT NULL,
+  `Career_Education` varchar(30) DEFAULT NULL,
+  `Career_Work_Experience` varchar(30) DEFAULT NULL,
+  `Career_Job_Desc` text,
+  `Career_Requrement` text,
+  `Career_Note` varchar(100) DEFAULT NULL,
+  `Career_Post_Create` datetime DEFAULT NULL,
+  `Career_Post_Update` datetime NOT NULL,
+  `Career_Job_Expired` date DEFAULT NULL,
+  `Carrer_Status` enum('draft','posting','trash') DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gocweb_career`
+--
+
+INSERT INTO `gocweb_career` (`Career_Id`, `Career_Title`, `Career_Departmen`, `Career_Location`, `Career_Education`, `Career_Work_Experience`, `Career_Job_Desc`, `Career_Requrement`, `Career_Note`, `Career_Post_Create`, `Career_Post_Update`, `Career_Job_Expired`, `Carrer_Status`) VALUES
+('JCG0001', 'Programmer Web', 'IT Department', 'DKI Jakarta', 'Bachelor Degree (IT/Computer)', '2 years', '<ul>\r\n	<li>Male or Female</li>\r\n	<li>Experienced related min 1 year,background education in Sales and Marketing</li>\r\n	<li>Minimum Bachelor Degree (S-1) in any major, prefered in IT background.</li>\r\n	<li>Experienced min 1 year in ISP</li>\r\n	<li>Having knowledge (ISP)</li>\r\n</ul>\r\n', '<p>-</p>\r\n', NULL, '2016-03-11 09:02:13', '2016-03-11 09:42:49', '2016-03-31', 'posting'),
+('JCG0003', 'Collection Support', 'General', 'DKI Jakarta', 'Bachelor Degree', 'Min. 1 years', '<ul>\r\n	<li>Monitoring &amp; Controling Collection Overview</li>\r\n	<li>Reconcilliation A/R</li>\r\n	<li>Call customers using telephone</li>\r\n	<li>Support on Field collector handling</li>\r\n	<li>Excellent communication and negotiation skills</li>\r\n	<li>Have previous experience in credit and collection area</li>\r\n	<li>Prepare AR detail list, warning letters to customers</li>\r\n</ul>\r\n', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill</li>\r\n	<li>Able to work with internal and external team/depatment</li>\r\n</ul>\r\n', NULL, '2016-03-11 09:07:09', '0000-00-00 00:00:00', '2016-03-31', 'posting'),
+('JCG0004', 'Account Manager', 'IT Department', 'DKI Jakarta', 'Bachelor Degree', '1 year', '<ul>\r\n	<li>Male or Female</li>\r\n	<li>Experienced related min 1 year,background education in Sales and Marketing</li>\r\n	<li>Minimum Bachelor Degree (S-1) in any major, prefered in IT background.</li>\r\n	<li>Experienced min 1 year in ISP</li>\r\n	<li>Having knowledge (ISP)</li>\r\n</ul>\r\n', '<ul>\r\n	<li>Male or Female</li>\r\n	<li>Experienced related min 1 year,background education in Sales and Marketing</li>\r\n	<li>Minimum Bachelor Degree (S-1) in any major, prefered in IT background.</li>\r\n	<li>Experienced min 1 year in ISP</li>\r\n	<li>Having knowledge (ISP)</li>\r\n</ul>\r\n', NULL, '2016-03-11 09:11:38', '0000-00-00 00:00:00', '2016-03-26', 'posting'),
+('JCG0005', 'Accounting Senior', 'Finance & Accounting Department', 'Gunung Sindur', 'Bachelor Degree (Accounting)', '1 year', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill\r\n	<ul>\r\n		<li>Able to work with internal and external team/depatment</li>\r\n	</ul>\r\n	</li>\r\n</ul>\r\n', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill</li>\r\n	<li>Able to work with internal and external team/depatment</li>\r\n</ul>\r\n', NULL, '2016-03-13 07:45:21', '0000-00-00 00:00:00', '2016-03-31', 'posting'),
+('JCG0006', 'Purchasing Staff', 'Finance & Accounting Department', 'DKI Jakarta', 'SMK / SMA', '2 years', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill</li>\r\n	<li>Able to work with internal and external team/depatment</li>\r\n</ul>\r\n', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill</li>\r\n	<li>Able to work with internal and external team/depatment</li>\r\n</ul>\r\n', NULL, '2016-03-13 07:46:31', '0000-00-00 00:00:00', '2016-03-31', 'posting'),
+('JCG0007', 'Analys System ', 'IT Department', 'DKI Jakarta', 'Bachelor Degree', '5 years', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill</li>\r\n	<li>Able to work with internal and external team/depatment</li>\r\n</ul>\r\n', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill</li>\r\n	<li>Able to work with internal and external team/depatment</li>\r\n</ul>\r\n', NULL, '2016-03-13 14:50:32', '0000-00-00 00:00:00', '2016-03-31', 'posting'),
+('JCG0008', 'Cashier ', 'Finance & Accounting Department', 'Gunung Sindur', 'SMK / SMA', 'Fresh Graduate are welcome', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill</li>\r\n	<li>Able to work with internal and external team/depatment</li>\r\n</ul>\r\n', '<ul>\r\n	<li>Male</li>\r\n	<li>Education background S.1</li>\r\n	<li>Experience in same level</li>\r\n	<li>Having motorcycle is advantage</li>\r\n	<li>Familiar with Microsoft office</li>\r\n	<li>Honestly and high analytical and problem solving skills</li>\r\n	<li>Excellent time management skill</li>\r\n	<li>Able to work with internal and external team/depatment</li>\r\n</ul>\r\n', NULL, '2016-03-13 14:51:46', '0000-00-00 00:00:00', '2016-03-31', 'posting');
 
 -- --------------------------------------------------------
 
@@ -146,13 +181,13 @@ CREATE TABLE IF NOT EXISTS `gocweb_menu` (
 --
 
 INSERT INTO `gocweb_menu` (`menu_id`, `menu_name`, `menu_url`, `menu_remark`, `menu_content_status`, `menu_date_modify`) VALUES
-('MNU0001', 'Home', 'http://localhost/goc_website/', 'halaman utama', b'00', '2016-02-22 09:52:28'),
-('MNU0002', 'Our Company', '#', 'tentang perusahaan', b'00', '2016-02-22 09:53:13'),
-('MNU0003', 'Our Brand', '#', 'Brand Perusahaan', b'00', '2016-02-22 09:56:04'),
-('MNU0004', 'News', 'http://localhost/goc_website/index.php/home/post/category/1', 'Artikel Tentang Perusahaan', b'00', '2016-02-22 09:56:39'),
-('MNU0005', 'Career', '#', 'Iklan Lowongan', b'00', '2016-02-22 09:57:05'),
-('MNU0006', 'FAQ', '#', '-', b'00', '2016-02-22 09:57:17'),
-('MNU0007', 'Contact Us', 'http://localhost/goc_website/index.php/home/contact', 'info contact perusahaan', b'00', '2016-02-22 09:57:42');
+('MNU0001', 'Home', 'http://localhost/goc_website/', 'halaman utama', b'11', '2016-02-22 09:52:28'),
+('MNU0002', 'Our Company', '#', 'tentang perusahaan', b'11', '2016-02-22 09:53:13'),
+('MNU0003', 'Our Brand', '#', 'Brand Perusahaan', b'11', '2016-02-22 09:56:04'),
+('MNU0004', 'News', 'http://localhost/goc_website/index.php/home/post/category/1', 'Artikel Tentang Perusahaan', b'11', '2016-02-22 09:56:39'),
+('MNU0005', 'Career', 'http://localhost/goc_website/index.php/home/career/', 'Iklan Lowongan', b'11', '2016-03-11 09:12:47'),
+('MNU0006', 'FAQ', '#', '-', b'11', '2016-02-22 09:57:17'),
+('MNU0007', 'Contact Us', 'http://localhost/goc_website/index.php/home/contact', 'info contact perusahaan', b'11', '2016-02-22 09:57:42');
 
 -- --------------------------------------------------------
 
@@ -184,6 +219,21 @@ INSERT INTO `gocweb_menu_content` (`menu_content_id`, `menu_refparent`, `menu_co
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `gocweb_message`
+--
+
+CREATE TABLE IF NOT EXISTS `gocweb_message` (
+  `message_id` varchar(100) NOT NULL DEFAULT '',
+  `message_name` varchar(50) DEFAULT NULL,
+  `message_subject` varchar(30) DEFAULT NULL,
+  `message_email` varchar(20) DEFAULT NULL,
+  `message_text` text,
+  `message_post_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `gocweb_page`
 --
 
@@ -207,9 +257,9 @@ CREATE TABLE IF NOT EXISTS `gocweb_page` (
 
 INSERT INTO `gocweb_page` (`page_id`, `page_title`, `page_short_desc`, `page_category`, `page_desc`, `page_pict`, `page_pict_thumb`, `page_status`, `page_date_create`, `page_date_update`, `author`) VALUES
 (18, 'Our Value', 'Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry ', 1, '<h1>Our Values</h1>\r\n\r\n<div style="margin-top:-10px;margin-left:5px;color:#8dc43f">What we stand for</div>\r\n\r\n<div style="width:100%;">\r\n<div style="width:50%;float:left;">\r\n<div style="padding:10px">\r\n<p style="text-align:justify">Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.</p>\r\n</div>\r\n</div>\r\n\r\n<div style="width:50%;float:left;">\r\n<div style="padding:10px">\r\n<p style="text-align:justify">Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.</p>\r\n</div>\r\n</div>\r\n</div>\r\n\r\n<div style="width:100%;">\r\n<div style="width:25%;float:left;height:100px;background-color:#ccc;margin-bottom:40px">&nbsp;</div>\r\n\r\n<div style="width:75%;float:left;height:100px;background-color:#8dc43f;">\r\n<div style="color: rgb(255, 255, 255); padding: 10px; text-align: justify;">Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country.</div>\r\n</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '', '', 'posting', '2016-02-22 15:54:06', '2016-02-25 09:53:21', 1),
-(19, 'Vision and Mission', 'Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry ', 1, '<p style="text-align: justify;">Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.</p>\r\n\r\n<p style="text-align: justify;">Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.</p>\r\n', '', '', 'posting', '2016-02-22 15:54:31', '2016-02-24 16:00:20', 1),
+(19, 'Vision and Mission', 'Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry ', 1, '<p>&nbsp;</p>\r\n\r\n<p><img src="http://www.jobsmnc.co.id/Content/images/bu%202015/0209.png" style="float:left; height:94px; margin-bottom:100px; margin-top:100px; width:200px" /></p>\r\n\r\n<p style="margin-left: 240px; text-align: justify;">Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.</p>\r\n\r\n<p style="margin-left: 240px; text-align: justify;">Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.</p>\r\n\r\n<p style="margin-left: 240px; text-align: justify;">Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.</p>\r\n', '', '', 'posting', '2016-02-22 15:54:31', '2016-03-11 11:10:02', 7),
 (20, 'Our History', '-											', 1, '<p>-</p>\r\n', '', '', 'posting', '2016-02-22 15:54:50', NULL, 1),
-(21, 'Kanna 1', '-', 2, '<p>-</p>\r\n', '', '', 'posting', '2016-02-25 09:57:19', NULL, 1),
+(21, 'Kanna 1', '-', 2, '<p>-</p>\r\n', 'thumb_default1.jpg', 'uploads/page/thumb/thumb_default1.jpg', 'posting', '2016-02-25 09:57:19', '2016-03-11 10:53:38', 7),
 (22, 'Kanna 2', '-', 2, '<p>-</p>\r\n', '', '', 'posting', '2016-02-25 09:57:33', NULL, 1),
 (23, 'Kanna 3', '-', 2, '<p>-</p>\r\n', '', '', 'posting', '2016-02-25 09:57:47', NULL, 1),
 (24, 'Kanna 4', '-', 2, '<p>-</p>\r\n', '', '', 'posting', '2016-02-25 09:58:01', NULL, 1),
@@ -365,7 +415,7 @@ CREATE TABLE IF NOT EXISTS `gocweb_setting` (
 --
 
 INSERT INTO `gocweb_setting` (`setting_id`, `setting_title`, `setting_tag_line`, `setting_desc`, `setting_logo`, `setting_thumb_logo`, `setting_vision`, `setting_mission`, `setting_moto`, `setting_date_update`) VALUES
-(1, 'PT Gloria Origita Cosmetics', 'Natural Ingredient - Modern Technology', 'Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.', 'goc.jpg', 'uploads/logo/thumb/goc.jpg', 'Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.', 'Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.', 'Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.', '2016-02-22 08:13:14');
+(1, 'PT Gloria Origita Cosmetics', 'Natural Ingredient - Modern Technology', 'Since its first establishment in 1993, PT. Gloria Origita Cosmetics has grown to be a prominent player in skin care and decorative cosmetics industry in South East Asia region, supplying good quality of products to all parts of the country. We have over dedicated 800 staffs in our factories and offices. PURBASARI, KANNA, NEW CELL, SOFT WHITE are some of our brands that distributed throughout Indonesia and some other countries.', 'goc.jpg', 'uploads/logo/thumb/goc.jpg', 'Did you have any questions? Feel free to ask and we will try to do our best.', 'Did you have any questions? Feel free to ask and we will try to do our best.', 'Did you have any questions? Feel free to ask and we will try to do our best.', '2016-03-13 07:01:06');
 
 -- --------------------------------------------------------
 
@@ -412,7 +462,7 @@ CREATE TABLE IF NOT EXISTS `gocweb_user` (
 
 INSERT INTO `gocweb_user` (`user_id`, `user_first_name`, `user_last_name`, `user_nick`, `user_username`, `user_password`, `user_email`, `user_date_log`) VALUES
 (1, 'Evan', 'Abeiza', 'Evan', 'evan_abeiza', 'user1234', 'evan.abeiza@gmail.com', '2016-02-25 13:08:08'),
-(7, 'Admin', 'Admin', 'Admin', 'admin', 'admin', 'admin@goc.co.id', '2016-03-03 15:47:02');
+(7, 'Admin', 'Admin', 'Admin', 'admin', 'admin', 'admin@goc.co.id', '2016-03-13 20:48:52');
 
 --
 -- Indexes for dumped tables
@@ -429,6 +479,12 @@ ALTER TABLE `gocweb_banner`
 --
 ALTER TABLE `gocweb_banner_content`
  ADD PRIMARY KEY (`banner_content_id`), ADD KEY `banner_contect_parent` (`banner_contect_parent`);
+
+--
+-- Indexes for table `gocweb_career`
+--
+ALTER TABLE `gocweb_career`
+ ADD PRIMARY KEY (`Career_Id`);
 
 --
 -- Indexes for table `gocweb_category`
@@ -453,6 +509,12 @@ ALTER TABLE `gocweb_menu`
 --
 ALTER TABLE `gocweb_menu_content`
  ADD PRIMARY KEY (`menu_content_id`), ADD KEY `gocweb_menu_content_ibfk_1` (`menu_refparent`);
+
+--
+-- Indexes for table `gocweb_message`
+--
+ALTER TABLE `gocweb_message`
+ ADD PRIMARY KEY (`message_id`);
 
 --
 -- Indexes for table `gocweb_page`

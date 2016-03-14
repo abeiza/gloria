@@ -1,8 +1,8 @@
 <div class="sixteen columns" style="width:100%;height:3px;background-color:#8dc43f;color:#fff;padding:">
 </div>
-<header class="sixteen columns" style="height:60px;">
+<header class="sixteen columns" style="height:80px;">
         
-        <a href="index.html" style="background-color:transparent;"><div style="position:absolute;width: 156px;height:133px;margin-left:20px;float:left;z-index: 100;"><img style="width:130px;margin-top:5px;" src="<?php echo base_url().'uploads/logo/'.$logo;?>"/></div></a>
+        <a href="index.html" style="background-color:transparent;"><div style="position:absolute;width: 156px;height:133px;margin-left:20px;float:left;z-index: 100;"><img style="width:130px;margin-top:10px;" src="<?php echo base_url().'uploads/logo/'.$logo;?>"/></div></a>
         
                 <nav class="mainmenu">
             
@@ -25,31 +25,6 @@
 							</li>
 					<?php	}
 					?>
-                    <!--<li><a href="#" class="current">HOME<span></span></a></li>
-                    
-                    <li><a href="#">COMPANY<span></span></a>
-                      <ul>
-                          <li><a href="gallery-filter-3columns.html">OUR VALUE</a></li>
-                          <li><a href="gallery-pagination-3columns.html">VISION AND MISSION</a></li>
-                          <li><a href="gallery-both-3columns.html">OUR HISTORY</a></li>
-                      </ul>
-                    </li>
-                    
-                    <li><a href="#">OUR BRAND<span></span></a>
-                      <ul>
-                          <li><a href="#">Purbasari</a></li>
-                          <li><a href="#">Kanna</a></li>
-                          <li><a href="#">New Cell</a></li>
-                          <li><a href="#">Amara</a></li>
-                      </ul>
-                      
-                    </li>
-                    
-                    <li><a href="#">NEWS<span></span></a></li>
-                    
-                    <li><a href="#">CAREER<span></span></a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">CONTACT US<span></span></a></li>-->
                     </ul>
                     <br style="clear: left" />
                 </div><!-- end ddsmoothmenu -->

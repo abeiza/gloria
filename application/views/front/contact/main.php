@@ -1,16 +1,16 @@
  <?php echo $map['js']; ?>
- <section class="mainContent">
+ <section class="mainContent" style="width:100%">
         <div class="contentBgFull"></div>
         
         <!-- Tag Line
         ================================================== -->
         
-        <div id="menuShadow-center" class="sixteen columns" style="position:absolute;z-index:999;margin-top:-50px;"></div>
+        <div id="menuShadow-center" class="sixteen columns" style="position:absolute;z-index:9;margin-top:-61px;"></div>
 		
         <!-- Map items
         ================================================== -->
 		<section>
-		<div style="margin-bottom:20px;float:left;width:100%;background:#ddd;margin-top:10px">
+		<div style="margin-bottom:20px;float:left;width:100%;background:#ddd;margin-top:0px">
 			<div id="canvas-peta">
 				<?php echo $map['html']; ?>
 				<!--<iframe style="width:100%; height:270px; margin:0; border:0; overflow:hidden;" src="http://maps.google.com/maps?q=<?php //echo $db['comp_lat']; ?>,<?php //echo $db['comp_long']; ?>&z=15&output=embed"></iframe>-->

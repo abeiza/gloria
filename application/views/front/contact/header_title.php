@@ -8,9 +8,8 @@
             </div>
            
             <div class="headerContentContainer">
-               <div class="pageTitle">Contact <span class="highlight">Us</span></div>
+               <div class="pageTitle"><span class="highlight">Contact Us</span></div>
                <!--<div class="breadCrumbs"><a href="index.html">Home</a> / <a href="#">Latest news</a>  / <a href="#">Blog</a>  / <span class="highlight">Lorem ipsum</span></div>-->
-			   <div style="font-size:16px;color:#8dc43f">Get in touch with GOC</div>
 			</div>
 				
             
