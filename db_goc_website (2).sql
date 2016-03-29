@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2016 at 07:11 AM
+-- Generation Time: Mar 15, 2016 at 11:13 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -462,7 +462,7 @@ CREATE TABLE IF NOT EXISTS `gocweb_user` (
 
 INSERT INTO `gocweb_user` (`user_id`, `user_first_name`, `user_last_name`, `user_nick`, `user_username`, `user_password`, `user_email`, `user_date_log`) VALUES
 (1, 'Evan', 'Abeiza', 'Evan', 'evan_abeiza', 'user1234', 'evan.abeiza@gmail.com', '2016-02-25 13:08:08'),
-(7, 'Admin', 'Admin', 'Admin', 'admin', 'admin', 'admin@goc.co.id', '2016-03-13 20:48:52');
+(7, 'Admin', 'Admin', 'Admin', 'admin', 'admin', 'admin@goc.co.id', '2016-03-15 15:27:56');
 
 --
 -- Indexes for dumped tables

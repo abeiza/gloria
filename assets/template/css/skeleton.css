@@ -184,6 +184,7 @@ img.scale-with-grid {
     /* Note: Design for a width of 320px */
 
     @media only screen and (max-width: 767px) {
+		#menuShadow{ margin-top:20px;}
         .container { width: 300px; }
         .container .columns,
         .container .column { margin: 0; }

@@ -56,9 +56,34 @@
                   
                    <!-- Text
                    ================================================== -->
-                   <?php echo $db->page_desc;?>
+                   <?php 
+						if($db->page_type=='product'){
+							?>
+							<div style="width:100%;float:left;">
+								<div style="width:50%;float:left;">
+									<div style="padding:10px">
+										<?php echo $db->page_desc;?>
+									</div>
+								</div>
+								<div style="width:50%;float:left;">
+									<div style="padding:10px">
+										<?php 
+											if($db->page_pict == null){
+												echo "<img src='".base_url().'uploads/page/original/thumb_default.jpg'."' style='width:100%' />";
+											}else{
+												echo "<img src='".base_url().'uploads/page/original/'.$db->page_pict."'  style='width:100%' />";
+											}
+										?>
+									</div>
+								</div>
+							</div>
+							<?php
+						}else{
+							echo $db->page_desc;
+						}
+					?>
 
-             </section><!-- End Content -->
+              </section><!-- End Content -->
                    
                   
               

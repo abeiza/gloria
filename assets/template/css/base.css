@@ -1,59 +1,28 @@
-@font-face {
-    font-family: 'CabinMediumItalic';
-    src: url('http://localhost/goc_website/assets/template/fonts/raleway.woff2');
-    //src: url('http://localhost/goc_website/assets/template/fonts/Cabin-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
-    //     url('http://localhost/goc_website/assets/template/fonts/Cabin-MediumItalic-webfont.woff') format('woff'),
-    //     url('http://localhost/goc_website/assets/template/fonts/Cabin-MediumItalic-webfont.ttf') format('truetype'),
-    //     url('http://localhost/goc_website/assets/template/fonts/Cabin-MediumItalic-webfont.svg#CabinMediumItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 @font-face {
-    font-family: 'sambung';
-    src: url('http://localhost/goc_website/assets/template/fonts/GreatVibes-Regular.ttf');
-	font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'hevaticaneu';
-    src: url('http://localhost/goc_website/assets/template/fonts/HelveticaNeue.ttf');
-	font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'CabinSemiBold';
+    font-family: 'Raleway-Reguler';
     font-style: normal;
 	font-weight: 300;
-	src: local("Raleway Light"), local("Raleway-Light"), url("https://fonts.gstatic.com/s/raleway/v10/-_Ctzj9b56b8RgXW8FArifk_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+	src: local("Raleway Reguler"), local("Raleway-Reguler"), url("http://pchohelpdesk/goc_website/assets/template/fonts/Raleway-Regular.ttf") format("woff2");
 	unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 
 }
 
-
 @font-face {
-  font-family: "CabinRegular";
+  font-family: "Raleway-ExtraLight";
   font-style: normal;
   font-weight: 300;
-  src: local("Raleway Light"), local("Raleway-Light"), url("https://fonts.gstatic.com/s/raleway/v10/-_Ctzj9b56b8RgXW8FArifk_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+  src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url("http://pchohelpdesk/goc_website/assets/template/fonts/Raleway-ExtraLight.ttf") format("woff2");
   unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 @font-face {
-  font-family: 'LoraRegular';
+  font-family: "Raleway-bold";
   font-style: normal;
-  font-weight: 300;
-  src: local("Raleway Light"), local("Raleway-Light"), url("https://fonts.gstatic.com/s/raleway/v10/-_Ctzj9b56b8RgXW8FArifk_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("http://pchohelpdesk/goc_website/assets/template/fonts/Raleway-Bold.ttf");
   unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-
 }
-
 
 
 
@@ -104,7 +73,7 @@
 	body {
 		//background:url("http://prev.freshface.net/file/wgb/wp/wp-content/uploads/2013/02/pattern3.png") 0px 0px repeat;
 		background: #fff;
-		font: 13.5px/25px 'CabinRegular';
+		font: 12.5px/25px 'Raleway-Reguler';
 		color: #444;
 		/*
 		-webkit-font-smoothing: antialiased;
@@ -122,7 +91,7 @@
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
 		color: #222;
-		font-family: 'CabinSemiBold', sans-serif;
+		font-family: 'Raleway-bold', sans-serif;
 		font-weight: bold;
 		}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }

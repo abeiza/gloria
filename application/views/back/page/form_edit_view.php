@@ -70,6 +70,14 @@
 											</select>
 										</div>
 										<div style="width:100%;float:left">
+											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Type Page*</label>
+											<select style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="type">
+												<option value="" selected disabled>-- Select Type --</option>
+												<option value="regular" <?php if($type == 'regular'){echo 'selected';}?>>Regular</option>
+												<option value="product" <?php if($type == 'product'){echo 'selected';}?>>Product</option>
+											</select>
+										</div>
+										<div style="width:100%;float:left">
 											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Category*</label>
 											<select style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="category">
 												<?php 

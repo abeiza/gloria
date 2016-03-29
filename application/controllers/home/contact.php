@@ -51,6 +51,31 @@
 			$this->load->view('front/others/body_end');
 		}
 		
+		function message(){
+			$hasil = $this->input->post('a') + $this->input->post('b');
+			$this->load->model('model_back');
+			if($hasil == $this->input->post('jml')){
+				$data['message_name'] = $this->input->post('name');
+				$data['message_email'] = $this->input->post('email');
+				$data['message_subject'] = $this->input->post('subject');
+				$data['message_text'] = $this->input->post('text');
+				$data['message_post_date'] = date("Y-m-d H:i:s");
+				
+				$add_data = $this->model_back->get_insert("gocweb_message",$data);
+				
+				if(!$add_data){
+					$this->session->set_flashdata("add_result",'<span style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry, Your Message Not Complete</span></span>');
+					Header("Location:".base_url()."index.php/home/contact/");
+				}else{
+					$this->session->set_flashdata("add_result",'<span style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:green; font-size:12px;"><i class="fa fa-check" style="color:green;font-size:16px;margin-right:5px;"></i>Thank You for Your Message</span></span>');
+					Header("Location:".base_url()."index.php/home/contact/");
+				}
+			}else{
+				$this->session->set_flashdata("add_result",'<span style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry, Are You Robots</span></span>');
+					Header("Location:".base_url()."index.php/home/contact/");
+			}
+		}
+		
 	}
 	/*End of file contact.php*/
 	/*Location:.application/controllers/home/contact.php*/

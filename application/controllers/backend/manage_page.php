@@ -93,6 +93,7 @@
 					$data['page_short_desc'] = $this->input->post('short');
 					$data['page_category'] = $this->input->post('category');
 					$data['page_desc'] = $this->input->post('desc');
+					$data['page_type'] = $this->input->post('type');
 					$data['page_status'] = $this->input->post('status');
 					
 					
@@ -148,6 +149,7 @@
 						$data['page_pict'] = $upload_data['file_name'];
 						$data['page_pict_thumb'] = $config1['new_image'];
 						$data['page_short_desc'] = $this->input->post('short');
+						$data['page_type'] = $this->input->post('type');
 						$data['page_category'] = $this->input->post('category');
 						
 						$data['page_date_create'] = date("Y-m-d H:i:s");
@@ -180,7 +182,7 @@
 				$data['categoryz'] = $db->page_category;
 				$data['short'] = $db->page_short_desc;
 				$data['pict'] = $db->page_pict;
-				//$data['tag'] = $db->post_tag;
+				$data['type'] = $db->page_type;
 			}
 			$data['category'] = $this->db->query("select page_category_id, page_category_name from gocweb_page_category order by page_category_name");
 			//$data['tag'] = $this->db->query("select tag_id, tag_name from gocweb_tag order by tag_name");
@@ -206,7 +208,7 @@
 					$data['page_category'] = $this->input->post('category');
 					$data['page_desc'] = $this->input->post('desc');
 					$data['page_status'] = $this->input->post('status');
-					
+					$data['page_type'] = $this->input->post('type');
 					
 					$data['page_date_update'] = date("Y-m-d H:i:s");
 					$data['author'] = $this->session->userdata('user_id');
@@ -262,6 +264,7 @@
 						$data['page_pict_thumb'] = $config1['new_image'];
 						$data['page_short_desc'] = $this->input->post('short');
 						$data['page_category'] = $this->input->post('category');
+						$data['page_type'] = $this->input->post('type');
 						
 						$data['page_date_update'] = date("Y-m-d H:i:s");
 						$data['author'] = $this->session->userdata('user_id');

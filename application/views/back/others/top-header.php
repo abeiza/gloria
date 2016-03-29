@@ -50,7 +50,7 @@
 						</div>
 						<div style="float:left">
 							<div style="color:#8dc43f;font-size:14px;margin:7px ;">
-								<i class="fa fa-desktop" style="margin-right:5px;color:#fff;background-color:#8dc43f; padding:10px; border-radius:100%"></i>View Website
+								<a style="color:#8dc43f;text-decoration:none;" href="<?php echo base_url();?>"><i class="fa fa-desktop" style="margin-right:5px;color:#fff;background-color:#8dc43f; padding:10px; border-radius:100%"></i>View Website</a>
 							</div>
 						</div>
 						<div style="float:right">

@@ -1,6 +1,6 @@
 <?php 
 	if(!defined('BASEPATH'))exit('No Direct Script Access Allowed');
-	class Manage_Career extends CI_Controller{
+	class Manage_Message extends CI_Controller{
 		function __construct(){
 			parent::__construct();
 		}
@@ -20,9 +20,9 @@
 					$offset = $page;
 				}
 				
-				$career = $this->model_back->get_data('gocweb_career');
-				$config['total_rows'] = $career->num_rows();
-				$config['base_url'] = base_url()."index.php/backend/manage_career/index/";
+				$message = $this->model_back->get_data('gocweb_message');
+				$config['total_rows'] = $message->num_rows();
+				$config['base_url'] = base_url()."index.php/backend/manage_message/index/";
 				$config['per_page'] = $limit;
 				$config['uri_segment'] = 4;
 				$config['full_tag_open'] = "<div class='pagination'><ul>";
@@ -55,14 +55,14 @@
 				$this->pagination->initialize($config);
 				$data['paging'] = $this->pagination->create_links();
 				
-				$data['career'] = $this->model_back->get_data_limit('gocweb_career',$limit,$offset);
+				$data['message'] = $this->model_back->get_data_limit('gocweb_message',$limit,$offset);
 				$data['limit'] = $limit;
-				$data['of'] = $career->num_rows();
+				$data['of'] = $message->num_rows();
 				
 				$this->load->view('back/others/top');
 				$this->load->view('back/others/left_side');
 				$this->load->view('back/others/top-header');
-				$this->load->view('back/career/manage_career_view',$data);
+				$this->load->view('back/message/manage_message_view',$data);
 				$this->load->view('back/others/bottom');
 				
 			}
@@ -183,7 +183,7 @@
 			$this->load->model('model_back');
 			$id = $this->uri->segment(4);
 			
-			$delete = $this->model_back->get_delete('gocweb_career','career_id',$id);
+			$delete = $this->model_back->get_delete('gocweb_message','message_id',$id);
 			
 			if(!$delete){
 				$this->session->set_flashdata("modify_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-check" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry, delete proses id fail... Please try again...</span></div>');
@@ -196,11 +196,11 @@
 		
 		function search(){
 			if($this->input->post('search') != ''){
-				$sess['search_career'] = $this->input->post('search');
+				$sess['search_message'] = $this->input->post('search');
 			}
 
 			$this->session->set_userdata($sess);
-			$search = $this->db->query("select * from gocweb_career where career_title like '%".$this->session->userdata('search_career')."%' or career_departmen like '%".$this->session->userdata('search_career')."%' or career_location like '%".$this->session->userdata('search_career')."%' or career_job_desc like '%".$this->session->userdata('search_career')."%' or career_requrement like '%".$this->session->userdata('search_career')."%'");
+			$search = $this->db->query("select * from gocweb_message where message_name like '%".$this->session->userdata('search_message')."%' or message_subject like '%".$this->session->userdata('search_message')."%' or message_text like '%".$this->session->userdata('search_message')."%'");
 			$page = $this->uri->segment(5);
 			$limit = 5;
 			
@@ -212,7 +212,7 @@
 			
 			//$user = $this->model_back->get_data('gocweb_user');
 			$config['total_rows'] = $search->num_rows();
-			$config['base_url'] = base_url()."index.php/backend/manage_career/search/index/";
+			$config['base_url'] = base_url()."index.php/backend/manage_message/search/index/";
 			$config['per_page'] = $limit;
 			$config['uri_segment'] = 5;
 			$config['full_tag_open'] = "<div class='pagination'><ul>";
@@ -246,16 +246,16 @@
 			$data['paging'] = $this->pagination->create_links();
 			
 			//$data['user_grid'] = $this->model_back->get_data_limit('gocweb_user',$limit,$offset);
-			$data['career'] = $this->db->query("select * from gocweb_career where career_title like '%".$this->session->userdata('search_career')."%' or career_departmen like '%".$this->session->userdata('search_career')."%' or career_location like '%".$this->session->userdata('search_career')."%' or career_job_desc like '%".$this->session->userdata('search_career')."%' or career_requrement like '%".$this->session->userdata('search_career')."%' LIMIT ".$limit." OFFSET ".$offset."");
+			$data['message'] = $this->db->query("select * from gocweb_message where message_name like '%".$this->session->userdata('search_message')."%' or message_subject like '%".$this->session->userdata('search_message')."%' or message_text like '%".$this->session->userdata('search_message')."%' LIMIT ".$limit." OFFSET ".$offset."");
 			$data['limit'] = $limit;
 			$data['of'] = $search->num_rows();
 			
 			$this->load->view('back/others/top');
 			$this->load->view('back/others/left_side');
 			$this->load->view('back/others/top-header');
-			$this->load->view('back/career/manage_career_view',$data);
+			$this->load->view('back/message/manage_message_view',$data);
 			$this->load->view('back/others/bottom');
 		}
 	}
-/*End of file manage_tag.php*/
-/*Location:.application/controllers/backend/manage_career.php*/
+/*End of file manage_message.php*/
+/*Location:.application/controllers/backend/manage_message.php*/

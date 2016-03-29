@@ -84,8 +84,12 @@
 											<input value="<?php echo $experience;?>" style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="experience"/>
 										</div>
 										<div style="width:100%;float:left">
-											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Date Expiration</label>
+											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Expiration Date</label>
 											<input value="<?php echo $exp;?>" style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="exp" id="exp"/>
+										</div>
+										<div style="width:100%;float:left">
+											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Count Position</label>
+											<input value="<?php echo $co;?>" style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="co" id="co"/>
 										</div>
 										<div style="width:100%;float:left">
 											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Status*</label>
