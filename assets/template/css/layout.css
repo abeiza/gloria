@@ -516,6 +516,24 @@ opacity: 0.8;
     background-position: center center;
 	
 }
+
+.headerContentContainer1{
+	width:1000px;
+	height: 150px;
+    position: absolute;
+    float: left;
+	text-align: left;
+	color: #000;
+	//background-color: #fff;
+	//background-color: rgba(255,255,255,.5);
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+    filter: alpha(opacity=50);
+	
+	
+}
+
 .breadCrumbs{
 	position: relative;
 }

@@ -23,8 +23,26 @@
 									<?php if(!validation_errors()){echo validation_errors();}else{ echo '<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i><strong style="font-size:16px;">Warning !</strong>'.validation_errors().'</div>';}?>
 									<?php echo $this->session->flashdata('add_result');?>
 								</div>
+								
+									<?php 
+										$query1 = $this->db->query("select banner_background from gocweb_banner where banner_id='".$this->uri->segment(4)."'");
+										
+										if($query1->num_rows() != 0){
+											foreach($query1->result() as $db){
+												?>
+												<div style="width:100%;float:left;padding:30px 0px 50px 0px;">
+												<span>Background :</span>
+													<img src="<?php echo base_url().'uploads/banner/original/'.$db->banner_background;?>" style="z-index:0;width:100%;border:1px solid #eee;padding:3px;"/>
+								
+												</div>
+											<?php
+											}
+										}
+									?>
+									
 								<div style="width:90%;float:left;padding:30px 0px 50px 0px;">
 									<div style="width:100%;float:left">
+										<span>Form Content Animation :</span>
 										<?php echo form_open_multipart('backend/banner/add_content/'.$kode); ?>
 										
 										<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="hidden" name="id" value="<?php echo $kode;?>"/>
@@ -44,11 +62,11 @@
 										</div>
 										<div style="width:100%;float:left;">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Coordinate x</label>
-											<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="number" name="x" value="900"/>
+											<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="number" name="x" value="500"/>
 										</div>
 										<div style="width:100%;float:left;">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Coordinate y</label>
-											<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="number" name="y" value="900"/>
+											<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="number" name="y" value="200"/>
 										</div>
 										<div style="width:100%;float:left;">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Speed</label>

@@ -6,14 +6,23 @@
             <div id="blurMask">
                 <canvas id="blurCanvas"></canvas>
             </div>
-			<div class="headerContentContainer">
-            <?php 
-				foreach($query->result() as $tt){?>
-					<div class="pageTitle"><span class="highlight" style="color:#fff;"><?php echo $tt->page_category_name?></span></div>
-					<!--<div class="breadCrumbs"><a href="index.html">Home</a> / <a href="#">Latest news</a>  / <a href="#">Blog</a>  / <span class="highlight">Lorem ipsum</span></div>-->
-				<?php
+			<?php 
+				foreach($query->result() as $db){
+					if($db->page_category_header == '' or $db->page_category_header == null){
+						?>
+						<div class="headerContentContainer">
+							<div class="pageTitle"><span class="highlight"><?php echo $db->page_category_name;?></span></div>
+						</div>
+						<?php
+					}else{
+						?>
+						<div class="headerContentContainer1">
+							<img src='<?php echo base_url();?>uploads/header/<?php echo $db->page_category_header; ?>' style="width:100%;height:100%;"/>
+						</div>
+						<?php
+					}
 				}
 			?>
-			</div>
+			
             
         </section>

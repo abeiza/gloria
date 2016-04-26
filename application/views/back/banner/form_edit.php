@@ -54,7 +54,7 @@
 										<div id="data" style="float:left;width:100%"></div>
 										<div style="width:100%;">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Background Image</label>
-											<img src="<?php echo base_url().'uploads/banner/original/'.$pict?>" style="width:65%;height:100px;border:1px solid #eee;padding:3px;"/>
+											<img src="<?php echo base_url().'uploads/banner/original/'.$pict?>" style="width:65%;border:1px solid #eee;padding:3px;"/>
 										</div>
 										<div style="width:100%">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Background Image</label>

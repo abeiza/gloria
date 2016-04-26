@@ -84,24 +84,65 @@
 			if($this->form_validation->run() == false){
 				$this->form_add();
 			}else{
-				$data['page_category_name'] = $this->input->post('name');
-				$data['page_category_description'] = $this->input->post('desc');
-				$data['page_category_update'] = date("Y-m-d H:i:s");
-				
-				$cek = $this->db->query("select page_category_name from gocweb_page_category where page_category_name='".$data['page_category_name']."'");
-				if($cek->num_rows() == 0){
-					$add_data = $this->model_back->get_insert('gocweb_page_category',$data);
-				
-					if(!$add_data){
-						$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your entry is fail.. Please try again.. </span></div>');
-						Header("Location:".base_url()."index.php/backend/manage_category_page/add/");
+				if(empty($_FILES['pict']['name'])){
+					$data['page_category_name'] = $this->input->post('name');
+					$data['page_category_description'] = $this->input->post('desc');
+					$data['page_category_update'] = date("Y-m-d H:i:s");
+					
+					$cek = $this->db->query("select page_category_name from gocweb_page_category where page_category_name='".$data['page_category_name']."'");
+					if($cek->num_rows() == 0){
+						$add_data = $this->model_back->get_insert('gocweb_page_category',$data);
+					
+						if(!$add_data){
+							$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your entry is fail.. Please try again.. </span></div>');
+							Header("Location:".base_url()."index.php/backend/manage_category_page/add/");
+						}else{
+							$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:green; font-size:12px;"><i class="fa fa-check" style="color:green;font-size:16px;margin-right:5px;"></i>Insert data is success</span></div>');
+							Header("Location:".base_url()."index.php/backend/manage_category_page/add/");
+						}	
 					}else{
-						$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:green; font-size:12px;"><i class="fa fa-check" style="color:green;font-size:16px;margin-right:5px;"></i>Insert data is success</span></div>');
+						$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your category name is available.. Please try again.. </span></div>');
 						Header("Location:".base_url()."index.php/backend/manage_category_page/add/");
-					}	
+					}
 				}else{
-					$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your category name is available.. Please try again.. </span></div>');
-					Header("Location:".base_url()."index.php/backend/manage_category_page/add/");
+					$configu['upload_path'] = './uploads/header/';
+					$configu['upload_url'] = base_url().'uploads/header/';
+					$configu['allowed_types'] = 'gif|jpeg|jpg|png';
+					$configu['max_size'] = '10000';
+					$configu['max_width'] = '10000';
+					$configu['max_height'] = '10000';
+					
+					$this->load->library('upload',$configu);
+					
+					if (!$this->upload->do_upload('pict'))
+					{
+						$error = array('error' => $this->upload->display_errors());
+						$this->load->view('form_upload', $error);
+					}
+					else
+					{
+						$upload_data = $this->upload->data();
+						$data['page_category_name'] = $this->input->post('name');
+						$data['page_category_header'] = $upload_data['file_name'];
+						$data['page_category_description'] = $this->input->post('desc');
+						$data['page_category_update'] = date("Y-m-d H:i:s");
+						
+						$cek = $this->db->query("select page_category_name from gocweb_page_category where page_category_name='".$data['page_category_name']."'");
+						if($cek->num_rows() == 0){
+							$add_data = $this->model_back->get_insert('gocweb_page_category',$data);
+						
+							if(!$add_data){
+								$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your entry is fail.. Please try again.. </span></div>');
+								Header("Location:".base_url()."index.php/backend/manage_category_page/add/");
+							}else{
+								$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:green; font-size:12px;"><i class="fa fa-check" style="color:green;font-size:16px;margin-right:5px;"></i>Insert data is success</span></div>');
+								Header("Location:".base_url()."index.php/backend/manage_category_page/add/");
+							}	
+						}else{
+							$this->session->set_flashdata("add_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your category name is available.. Please try again.. </span></div>');
+							Header("Location:".base_url()."index.php/backend/manage_category_page/add/");
+						}
+					}
 				}
 			}
 		}
@@ -114,6 +155,7 @@
 				$data['id'] = $db->page_category_id;
 				$data['name'] = $db->page_category_name;
 				$data['desc'] = $db->page_category_description;
+				$data['pict'] = $db->page_category_header;
 			}
 			$this->load->view('back/others/top');
 			$this->load->view('back/others/left_side');
@@ -128,20 +170,56 @@
 			if($this->form_validation->run() == false){
 				$this->form_edit($this->uri->segment(4));
 			}else{
-				$id = $this->uri->segment(4);
-				$data['page_category_name'] = $this->input->post('name');
-				$data['page_category_description'] = $this->input->post('desc');
-				$data['page_category_update'] = date("Y-m-d H:i:s");
-				
-				$edit_data = $this->model_back->get_update('gocweb_page_category',$data,'page_category_id',$id);
-				
-				if(!$edit_data){
-					$this->session->set_flashdata("edit_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your update is fail.. Please try again.. </span></div>');
-					Header("Location:".base_url()."index.php/backend/manage_category_page/edit/".$id);
+				if(empty($_FILES['pict']['name'])){
+					$id = $this->uri->segment(4);
+					$data['page_category_name'] = $this->input->post('name');
+					$data['page_category_description'] = $this->input->post('desc');
+					$data['page_category_update'] = date("Y-m-d H:i:s");
+					
+					$edit_data = $this->model_back->get_update('gocweb_page_category',$data,'page_category_id',$id);
+					
+					if(!$edit_data){
+						$this->session->set_flashdata("edit_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your update is fail.. Please try again.. </span></div>');
+						Header("Location:".base_url()."index.php/backend/manage_category_page/edit/".$id);
+					}else{
+						$this->session->set_flashdata("edit_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:green; font-size:12px;"><i class="fa fa-check" style="color:green;font-size:16px;margin-right:5px;"></i>Update data is success</span></div>');
+						Header("Location:".base_url()."index.php/backend/manage_category_page/edit/".$id);
+					}	
 				}else{
-					$this->session->set_flashdata("edit_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:green; font-size:12px;"><i class="fa fa-check" style="color:green;font-size:16px;margin-right:5px;"></i>Update data is success</span></div>');
-					Header("Location:".base_url()."index.php/backend/manage_category_page/edit/".$id);
-				}	
+					$configu['upload_path'] = './uploads/header/';
+					$configu['upload_url'] = base_url().'uploads/header/';
+					$configu['allowed_types'] = 'gif|jpeg|jpg|png';
+					$configu['max_size'] = '10000';
+					$configu['max_width'] = '10000';
+					$configu['max_height'] = '10000';
+					
+					$this->load->library('upload',$configu);
+					
+					if (!$this->upload->do_upload('pict'))
+					{
+						$error = array('error' => $this->upload->display_errors());
+						$this->load->view('form_upload', $error);
+					}
+					else
+					{
+						$upload_data = $this->upload->data();
+						$id = $this->uri->segment(4);
+						$data['page_category_name'] = $this->input->post('name');
+						$data['page_category_header'] = $upload_data['file_name'];
+						$data['page_category_description'] = $this->input->post('desc');
+						$data['page_category_update'] = date("Y-m-d H:i:s");
+						
+						$edit_data = $this->model_back->get_update('gocweb_page_category',$data,'page_category_id',$id);
+						
+						if(!$edit_data){
+							$this->session->set_flashdata("edit_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:red; font-size:12px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i>Sorry your update is fail.. Please try again.. </span></div>');
+							Header("Location:".base_url()."index.php/backend/manage_category_page/edit/".$id);
+						}else{
+							$this->session->set_flashdata("edit_result",'<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><span style="color:green; font-size:12px;"><i class="fa fa-check" style="color:green;font-size:16px;margin-right:5px;"></i>Update data is success</span></div>');
+							Header("Location:".base_url()."index.php/backend/manage_category_page/edit/".$id);
+						}
+					}
+				}
 			}
 		}
 		

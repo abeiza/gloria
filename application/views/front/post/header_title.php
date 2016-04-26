@@ -10,7 +10,7 @@
 					foreach($query->result() as $ct){
 				?>
             <div class="headerContentContainer">
-               <div class="pageTitle">The <span class="highlight"><?php echo $ct->post_title;?></span></div>
+               <div class="pageTitle"><span class="highlight"><?php echo $ct->post_title;?></span></div>
                <!--<div class="breadCrumbs"><a href="index.html">Home</a> / <a href="#">Latest news</a>  / <a href="#">Blog</a>  / <span class="highlight">Lorem ipsum</span></div>-->
             </div>
 				<?php 

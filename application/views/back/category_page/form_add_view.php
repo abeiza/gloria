@@ -23,12 +23,16 @@
 								<div>
 									<?php if(!validation_errors()){echo validation_errors();}else{ echo '<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i><strong style="font-size:16px;">Warning !</strong>'.validation_errors().'</div>';}?>
 									<?php echo $this->session->flashdata('add_result');?>
-									<?php echo form_open('backend/manage_category_page/add/');?>
+									<?php echo form_open_multipart('backend/manage_category_page/add/');?>
 								</div>
 								<div style="width:400px;">
 										<div style="width:100%">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Category Name*</label>
 											<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="name"/>
+										</div>
+										<div style="width:100%">
+											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Header Image</label>
+											<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="file" name="pict"/>
 										</div>
 										<div style="width:100%">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Description</label>

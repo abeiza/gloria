@@ -23,18 +23,32 @@
 								<div>
 									<?php if(!validation_errors()){echo validation_errors();}else{ echo '<div style="margin:10px 20px;width:auto;background-color:#ffffbf;font-size:12px;border-radius:3px;color:red;padding:10px;"><i class="fa fa-exclamation-triangle" style="color:red;font-size:16px;margin-right:5px;"></i><strong style="font-size:16px;">Warning !</strong>'.validation_errors().'</div>';}?>
 									<?php echo $this->session->flashdata('edit_result');?>
-									<?php echo form_open('backend/manage_category_page/edit/'.$id); ?>
+									<?php echo form_open_multipart('backend/manage_category_page/edit/'.$id); ?>
 								</div>
-								<div style="width:400px;">
-										<div style="width:100%">
+								<div style="width:100%;">
+										<div style="width:100%;float:left;">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Category Name*</label>
 											<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="name" value="<?php echo $name;?>"/>
 										</div>
-										<div style="width:100%">
+										<div style="width:100%;float:left;">
+											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Header Image</label>
+											<input style="width:60%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="file" name="pict"/>
+										</div>
+										<?php 
+											if($pict != null or $pict != ''){
+										?>
+											<div style="width:100%;text-align:center;float:left;">
+												<h6 style="margin:5px 0px;margin-right:35%;">Header Pict :</h6>
+												<img src="<?php echo base_url().'uploads/header/'.$pict;?>" style=""/>
+											</div>
+										<?php
+											}
+										?>
+										<div style="width:100%;float:left;">
 											<label style="width:30%;float:left;text-align:right;margin-top:10px; margin-right:10px;">Description</label>
 											<textarea style="width:60%;height:300px;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="desc"><?php echo $desc;?></textarea>
 										</div>
-										<div style="width:100%;">
+										<div style="width:100%;float:left;">
 											<div style="margin-left:32.5%;">
 												<button style="cursor:pointer;font-size:14px;border:1px solid #ccc;list-style:none;color:#717171;margin:0px 2px;background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#e9e9e9));
     background: -moz-linear-gradient(0% 0% 270deg,#f8f8f8, #e9e9e9);border-radius:3px;box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);padding:5px;" type="submit"><i class="fa fa-send" style="margin-right:5px;"></i>Submit</button>

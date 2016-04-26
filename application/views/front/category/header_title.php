@@ -9,7 +9,7 @@
 			<div class="headerContentContainer">
             <?php 
 				foreach($query->result() as $tt){?>
-               <div class="pageTitle"><span class="highlight">The <?php echo $tt->category_name?></span></div>
+               <div class="pageTitle"><span class="highlight"><?php echo $tt->category_name?></span></div>
                <!--<div class="breadCrumbs"><a href="index.html">Home</a> / <a href="#">Latest news</a>  / <a href="#">Blog</a>  / <span class="highlight">Lorem ipsum</span></div>-->
 				<?php
 				}

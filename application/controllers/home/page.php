@@ -78,7 +78,7 @@
 		function single($id){
 			$id = $this->uri->segment(4);
 			
-			$data['query'] = $this->db->query("select * from gocweb_page where page_id='".$id."'");
+			$data['query'] = $this->db->query("select * from gocweb_page, gocweb_page_category where gocweb_page.page_category = gocweb_page_category.page_category_id and gocweb_page.page_id='".$id."'");
 			
 			
 			$this->load->view('front/others/head');

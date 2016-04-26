@@ -3,7 +3,7 @@
     font-family: 'Raleway-Reguler';
     font-style: normal;
 	font-weight: 300;
-	src: local("Raleway Reguler"), local("Raleway-Reguler"), url("http://pchohelpdesk/goc_website/assets/template/fonts/Raleway-Regular.ttf") format("woff2");
+	src: local("Raleway Reguler"), local("Raleway-Reguler"), url("http://192.168.171.49/goc_website/assets/template/fonts/Raleway-Regular.ttf") format("woff2");
 	unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 
 }
@@ -12,7 +12,7 @@
   font-family: "Raleway-ExtraLight";
   font-style: normal;
   font-weight: 300;
-  src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url("http://pchohelpdesk/goc_website/assets/template/fonts/Raleway-ExtraLight.ttf") format("woff2");
+  src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url("http://192.168.171.49/goc_website/assets/template/fonts/Raleway-ExtraLight.ttf") format("woff2");
   unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
@@ -20,7 +20,7 @@
   font-family: "Raleway-bold";
   font-style: normal;
   font-weight: 700;
-  src: local("Raleway Bold"), local("Raleway-Bold"), url("http://pchohelpdesk/goc_website/assets/template/fonts/Raleway-Bold.ttf");
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("http://192.168.171.49/goc_website/assets/template/fonts/Raleway-Bold.ttf");
   unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
