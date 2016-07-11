@@ -55,6 +55,25 @@
 			}	
 			return $kode.$kd;
 		}
+		
+		function getMaxKodelong($table, $pk, $kode)
+		{
+			$q = $this->db->query("select MAX(RIGHT(".$pk.",7)) as kd_max from ".$table."");
+			$kd = "";
+			if($q->num_rows()>0)
+			{
+				foreach($q->result() as $k)
+				{
+					$tmp = ((int)$k->kd_max)+1;
+					$kd = sprintf("%07s", $tmp);
+				}
+			}
+			else
+			{
+				$kd = "0000001";
+			}	
+			return $kode.$kd;
+		}
 	}
 	
 /*End of file model_back.php*/

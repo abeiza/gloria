@@ -57,11 +57,11 @@
                         <span class="portfolioArrow"></span>
 						
 						
-						<!-- Sample div used as an item's description, will only appear inside JackBox -->
-                        <div class="jackbox-description" id="<?php echo 'pages_'.$db->page_id;?>">
-                            <h3><?php echo $db->page_title;?></h3>
+						<!-- Sample div used as an item's description, will only appear inside JackBox --
+                        <div class="jackbox-description" id="<?php //echo 'pages_'.$db->page_id;?>">
+                            <h3><?php //echo $db->page_title;?></h3>
                              
-                        </div>
+                        </div>-->
 						
 
                         

@@ -25,12 +25,12 @@
 	<link rel="stylesheet" href="<?php echo base_url().'assets/template/'; ?>css/base.css"/>
 	<link rel="stylesheet" href="<?php echo base_url().'assets/template/'; ?>css/skeleton.css"/>
 	<link rel="stylesheet" href="<?php echo base_url().'assets/template/'; ?>css/layout.css"/>
-    <link rel="stylesheet" href="<?php echo base_url().'assets/template/'; ?>jackbox/css/jackbox_hovers.css"/>
-    <link rel="stylesheet" href="<?php echo base_url().'assets/template/'; ?>jackbox/css/jackbox.css"/>
+    <!--<link rel="stylesheet" href="<?php //echo base_url().'assets/template/'; ?>jackbox/css/jackbox_hovers.css"/>
+    <link rel="stylesheet" href="<?php //echo base_url().'assets/template/'; ?>jackbox/css/jackbox.css"/>-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
     <!-- Colors -->
-	<link id="colorTheme" rel='stylesheet' href='<?php echo base_url().'assets/template/'; ?>css/colors/orangeTheme.css'/>
+	<link id="colorTheme" rel='stylesheet' href="<?php echo base_url().'assets/template/'; ?>css/colors/orangeTheme.css"/>
     
     <!-- JS
   ================================================== -->

@@ -3,7 +3,7 @@
 				<!-- Header -->
 				<div style="float:left;width:100%;height:11.5%;background:#fff;color:#787878;">
 					<div style="margin:0px 20px;width:auto;">	
-						<h2 style="text-transform:uppercase;"><i class="fa fa-briefcase" style="margin-right:10px"></i>Job Posting</h2>
+						<h2 style="text-transform:uppercase;"><i class="fa fa-info-circle" style="margin-right:10px"></i>Job Posting</h2>
 					</div>
 				</div>
 				<!-- End of header -->

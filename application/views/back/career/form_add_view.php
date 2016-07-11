@@ -10,6 +10,24 @@
 				<script>
 					$(function() {
 						$("#exp").datepicker({dateFormat: 'yy-mm-dd'});
+						
+						$("#dept").change(function(){
+							id=$("#dept").val();
+							$.ajax({
+								url:"<?php echo base_url();?>index.php/backend/manage_career/get_position/",
+								cache:false,
+								data:"id="+id,
+								dataType: 'json',
+								success:function(result){
+									//alert(result);
+									$("#position option").remove();
+									$("#position").append('<option value="" selected disabled> -- Select Job Position -- </option>');
+									$.each(result, function(i, data){
+									$('#position').append("<option value='"+data.job_position_id+"'>"+data.job_short_code+" - "+data.job_position_name+"</option>");
+									});
+								}
+							});
+						});
 					});
 				</script>
 				<script type="text/javascript" src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
@@ -56,17 +74,22 @@
 								<div style="width:20%;float:left;background:transparent;padding:30px 0px 50px 0px;">
 										<div style="width:100%;float:left">
 											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Department*</label>
-											<select style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="dept">
-												<option value="" selected disabled>-- Select Dept --</option>
-												<option value="IT Department">IT Dept</option>
-												<option value="Finance & Accounting Department">Finance & Acc Dept</option>
-												<option value="HR Department">HR Dept</option>
-												<option value="Marketing Department">Marketing Dept</option>
-												<option value="Production Department">Production Dept</option>
-												<option value="R n D Department">R&D Dept</option>
-												<option value="QA Department">QA Dept</option>
-												<option value="SCM Department">SCM Dept</option>
-												<option value="General">General</option>
+											<select id="dept" style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" name="dept">
+												<option value="" selected disabled>-- Select Department --</option>
+												<option value="ACC">Accounting and Finance</option>
+												<option value="GEN">General</option>
+												<option value="HR">Human Resource Division</option>
+												<option value="IT">Information & Technology</option>
+												<option value="MRK">Marketing</option>
+												<option value="PRD">Production</option>
+												<option value="QA">Quality Assurance</option>
+												<option value="RND">Research and Development</option>
+											</select>
+										</div>
+										<div style="width:100%;float:left">
+											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Position*</label>
+											<select id="position" name="position" style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="dept">
+												<option value="" selected disabled>-- Select Job Position --</option>
 											</select>
 										</div>
 										<div style="width:100%;float:left">

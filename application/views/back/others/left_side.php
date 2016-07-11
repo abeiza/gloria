@@ -22,8 +22,21 @@
 				</div>
 				<!-- End of logo side -->
 				<!-- Menu Side -->
-				<div style="width:100%;height:80%;background:#343a3d;float:left;color:#fff">
+				<div style="width:100%;height:80%;background:#343a3d;float:left;color:#fff;overflow:auto;">
 				<style>
+					::-webkit-scrollbar {
+						width: 5px;
+					}
+					 
+					::-webkit-scrollbar-track {
+						-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+						border-radius: 10px;
+					}
+					 
+					::-webkit-scrollbar-thumb {
+						border-radius: 10px;
+						-webkit-box-shadow: inset 10px 10px 5px 0px rgba(212,210,212,1);; 
+					}
 					.transition, p,.submenu, .menu li i:before, .menu li i:after {
 					  transition: all 0.25s ease-in-out;
 					}
@@ -181,10 +194,18 @@
 						</ul>
 					  </li>
 					  <hr style="border-color:#7f7f7f;"/>
-					  <li style="margin-top:20px; margin-bottom:20px;">
-						<a style="text-decoration:none;color:#fff;" href="<?php echo base_url();?>index.php/backend/manage_career"><span class="fa fa-briefcase" style="margin-right:10px;color:#fff"></span><span>Career</span></a>
+					  <li>
+						<input type="checkbox" checked>
+						<i></i>
+						<span class="fa fa-briefcase" style="margin-right:10px;color:#fff"></span><span>Career</span>
+						<ul class="submenu menu" style="margin-bottom:14px;margin-left:-20px;margin-right:-20px; background:#8dc43f; color:#ededeb">
+							<li style="padding:10px;"><a style="text-decoration:none;color:#ededeb" href="<?php echo base_url();?>index.php/backend/manage_career/"><span class="fa fa-info-circle" style="margin-right:10px;"></span><span>Job Vacancy</span></a></li>
+							<!--<li style="padding:10px;"><a style="text-decoration:none;color:#ededeb" href="#"><span class="fa fa-header" style="margin-right:10px;"></span><span>Header</span></a></li>-->
+							<li style="padding:10px;"><a style="text-decoration:none;color:#ededeb" href="<?php echo base_url();?>index.php/backend/manage_career/grid_position/"><span class="fa fa-tasks" style="margin-right:10px;"></span><span>Job Position</span></a></li>
+							<li style="padding:10px;"><a style="text-decoration:none;color:#ededeb" href="<?php echo base_url();?>index.php/backend/manage_career/grid_applying_application/"><span class="fa fa-group" style="margin-right:10px;"></span><span>Job Applicant</span></a></li>
+						</ul>
 					  </li>
-					  <li style="margin-top:20px; margin-bottom:20px;">
+					  <li style="margin-bottom:20px;">
 						<a style="text-decoration:none;color:#fff;" href="<?php echo base_url();?>index.php/backend/manage_message"><span class="fa fa-envelope" style="margin-right:10px;color:#fff"></span><span>Message</span></a>
 					  </li>
 					  <li>

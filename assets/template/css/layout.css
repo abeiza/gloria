@@ -46,10 +46,10 @@
 }
 
 .mainContent{
- position: relative;
+  position: relative;
   float: left;
   padding-bottom: 60px;
-  background: #fff;
+  background: transparent;
   width:100%;
 }
 

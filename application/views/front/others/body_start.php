@@ -1,4 +1,4 @@
-<body>
+<body style="overflow-x: hidden;">
 
 	<!--//headerBg-->
     <div class="headerBg"></div>

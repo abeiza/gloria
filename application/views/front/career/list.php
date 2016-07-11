@@ -121,7 +121,7 @@
 						
 					}else{
 						foreach($career->result() as $db){?>
-							<li tabindex="0" class="click" style="display:block;float:left;width:95%;left;margin:5px;border: 1px solid #eeeeee; padding:10px;border-radius:3px;">
+							<li tabindex="0" class="click" style="display:block;float:left;width:95%;left;margin:5px;border: 1px solid #eeeeee; padding:20px 10px;border-radius:3px;">
 							<span class="title" style="color:#444;margin:0px;width:auto;"><i class="fa fa-angle-double-down" style="margin-right:10px;"></i><?php echo $db->Career_Title; ?></span>
 							<div style="width:150px;float:right;"><span class="title" style="margin:0px 10px;color:#444;margin:0px;width:auto;float:left"><i class="fa fa-users" style="margin:0px 10px;"></i><?php if($db->Career_Qty != ''){echo $db->Career_Qty;}else{echo "-";}?></span></div>
 							<div style="width:150px;float:right;"><span class="title" style="margin:0px 10px;color:#444;margin:0px;width:auto;float:left"><i class="fa fa-location-arrow" style="margin:0px 10px;"></i><?php echo $db->Career_Location; ?></span></div>
@@ -129,15 +129,53 @@
 								<div class="lineSeparator"></div>
 								<div style="margin-top:20px;">
 									<h4 >Other Information</h4>
-									<span style="font-size:12px;font-weight:bold;">Department : </span><?php echo $db->Career_Departmen; ?><br/>
+									<span style="font-size:12px;font-weight:bold;">Department : </span><?php 
+										if($db->Career_Departmen == 'IT'){
+											echo 'Information and Tech.';
+										}else if($db->Career_Departmen == 'MRK'){
+											echo 'Marketing';
+										}else if($db->Career_Departmen == 'QA'){
+											echo 'Quality Assurance.';
+										}else if($db->Career_Departmen == 'RND'){
+											echo 'Research and Development.';
+										}else if($db->Career_Departmen == 'HR'){
+											echo 'Human Resource Division';
+										}else if($db->Career_Departmen == 'GEN'){
+											echo 'General.';
+										}else if($db->Career_Departmen == 'ACC'){
+											echo 'Accounting and Finance';
+										}else if($db->Career_Departmen == 'PRD'){
+											echo 'Production';
+										}
+										
+									?><br/>
 									<span style="font-size:12px;font-weight:bold;">Latest Education : </span><?php echo $db->Career_Education; ?><br/>
 									<span style="font-size:12px;font-weight:bold;">Work Experience : </span><?php echo $db->Career_Work_Experience; ?><br/>
 									<span style="font-size:12px;font-weight:bold;">Date Expired : </span><?php echo $db->Career_Job_Expired; ?><br/>
 									<span style="font-size:12px;font-weight:bold;">Location : </span><?php echo $db->Career_Location; ?>
 								</div>
+								<div style="margin-top:10px;">
+									<a tabindex="0" href="<?php echo base_url().'index.php/home/career/form_applicant_personal/'.$db->Career_Id;?>" style="border:1px solid #8dc43f;border-radius:3px;padding:7px 10px;">Apply This Job</a>
+								</div>
 								<div style="font-size:12px; width:auto; background:transparent; text-align:right;"><i class="fa fa-info-circle" style="margin-right:10px;"></i>Click For More Information</div>
 							</div>
 							<div class="info">
+							<style>
+								::-webkit-scrollbar {
+									width: 5px;
+								}
+								 
+								::-webkit-scrollbar-track {
+									//-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+									border-radius: 10px;
+								}
+								 
+								::-webkit-scrollbar-thumb {
+									border-radius: 10px;
+									//-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+									background:#e1e1e1;
+								}
+							</style>
 							<div class="info2" STYLE="overflow:auto;">
 								<a style="text-align:right;float:right;background:transparent;color:#8dc43f" id="close" tabindex="0"><i class="fa fa-close"></i></a>
 								<h2 style="color:#8dc43f"><span><?php echo $db->Career_Title; ?></span></h2>
@@ -153,14 +191,34 @@
 								<div class="lineSeparator"></div>
 								<div style="margin-top:20px;">
 									<h4>Other Information</h4>
-									<span style="font-size:12px;font-weight:bold;">Department : </span><?php echo $db->Career_Departmen; ?><br/>
+									
+									<span style="font-size:12px;font-weight:bold;">Department : </span><?php 
+										if($db->Career_Departmen == 'IT'){
+											echo 'Information and Tech.';
+										}else if($db->Career_Departmen == 'MRK'){
+											echo 'Marketing';
+										}else if($db->Career_Departmen == 'QA'){
+											echo 'Quality Assurance.';
+										}else if($db->Career_Departmen == 'RND'){
+											echo 'Research and Development.';
+										}else if($db->Career_Departmen == 'HR'){
+											echo 'Human Resource Division';
+										}else if($db->Career_Departmen == 'GEN'){
+											echo 'General.';
+										}else if($db->Career_Departmen == 'ACC'){
+											echo 'Accounting and Finance';
+										}else if($db->Career_Departmen == 'PRD'){
+											echo 'Production';
+										}
+										
+									?><br/>
 									<span style="font-size:12px;font-weight:bold;">Latest Education : </span><?php echo $db->Career_Education; ?><br/>
 									<span style="font-size:12px;font-weight:bold;">Work Experience : </span><?php echo $db->Career_Work_Experience; ?><br/>
 									<span style="font-size:12px;font-weight:bold;">Date Expired : </span><?php echo $db->Career_Job_Expired; ?><br/>
 									<span style="font-size:12px;font-weight:bold;">Location : </span><?php echo $db->Career_Location; ?>
 								</div>
 								<div style="text-align:center;padding:20px 0px">
-									<h5>Send your CV to <strong style="color:red">hr@goc.co.id</strong></h5>
+									<!--<h5>Send your CV to <strong style="color:red">hr@goc.co.id</strong></h5>-->
 								</div>
 							</div>
 							</div>
@@ -168,9 +226,10 @@
 						<?php
 						}
 					}
+				
 				?>
             </ul>
-           
+			</ul>
             </div>
             
         

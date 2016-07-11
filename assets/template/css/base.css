@@ -54,7 +54,8 @@
 	body {
 		line-height: 1; }
 	ol, ul {
-		list-style: none; }
+		//list-style: none; 
+		}
 	blockquote, q {
 		quotes: none; }
 	blockquote:before, blockquote:after,
@@ -160,7 +161,12 @@
 /* #Lists
 ================================================== */
 	ul, ol { margin-bottom: 20px; }
-	ul { list-style: none outside; }
+	ul { 
+		//list-style: none outside; 
+	}
+	.sosmed{
+		list-style:none;
+	}
 	ol { list-style: decimal; }
 	ol, ul.bullet, ul.check, ul.square, ul.circle, ul.disc { margin-left: 20px; }
 	ul.square { list-style: square outside; }

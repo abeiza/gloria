@@ -17,7 +17,11 @@
 								if($query->num_rows() != 0){
 									echo "<ul>";
 									foreach($query->result() as $nav_sub){
-										echo "<li><a style='text-transform:uppercase;' href='".$nav_sub->menu_content_url."'>".$nav_sub->menu_content_label."</a></li>";
+										if($nav_sub->menu_content_label == 'PURBASARI'){
+											echo "<li><a style='text-transform:uppercase;' href='".$nav_sub->menu_content_url."' target='_blank'>".$nav_sub->menu_content_label."</a></li>";
+										}else{
+											echo "<li><a style='text-transform:uppercase;' href='".$nav_sub->menu_content_url."'>".$nav_sub->menu_content_label."</a></li>";
+										}
 									}
 									echo "</ul>";
 								}

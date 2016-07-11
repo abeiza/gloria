@@ -12,6 +12,46 @@
 				<script>
 					$(function() {
 						$("#exp").datepicker({dateFormat: 'yy-mm-dd'});
+						
+						$(function(){
+							id=$("#dept").val();
+							$.ajax({
+								url:"<?php echo base_url();?>index.php/backend/manage_career/get_position/",
+								cache:false,
+								data:"id="+id,
+								dataType: 'json',
+								success:function(result){
+									//alert(result);
+									$("#position option").remove();
+									$("#position").append('<option value="" selected disabled> -- Select Job Position -- </option>');
+									$.each(result, function(i, data){
+										if(data.job_position_id == '<?php echo $position;?>'){
+											$('#position').append("<option value='"+data.job_position_id+"' selected>"+data.job_short_code+" - "+data.job_position_name+"</option>");
+										}else{
+											$('#position').append("<option value='"+data.job_position_id+"'>"+data.job_short_code+" - "+data.job_position_name+"</option>");
+										}
+									});
+								}
+							});
+						});
+						
+						$("#dept").change(function(){
+							id=$("#dept").val();
+							$.ajax({
+								url:"<?php echo base_url();?>index.php/backend/manage_career/get_position/",
+								cache:false,
+								data:"id="+id,
+								dataType: 'json',
+								success:function(result){
+									//alert(result);
+									$("#position option").remove();
+									$("#position").append('<option value="" selected disabled> -- Select Job Position -- </option>');
+									$.each(result, function(i, data){
+									$('#position').append("<option value='"+data.job_position_id+"'>"+data.job_short_code+" - "+data.job_position_name+"</option>");
+									});
+								}
+							});
+						});
 					});
 				</script>
 				<script type="text/javascript" src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
@@ -58,17 +98,22 @@
 								<div style="width:20%;float:left;background:transparent;padding:30px 0px 50px 0px;">
 										<div style="width:100%;float:left">
 											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Department*</label>
-											<select style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="dept">
-												<option value="" selected disabled>-- Select Dept --</option>
-												<option value="IT Department" <?php if($dept == 'IT Department'){echo 'selected'; }?>>IT Dept</option>
-												<option value="Finance & Accounting Department" <?php if($dept == 'Finance & Accounting Department'){echo 'selected'; }?>>Finance & Acc Dept</option>
-												<option value="HR Department" <?php if($dept == 'HR Department'){echo 'selected'; }?>>HR Dept</option>
-												<option value="Marketing Department" <?php if($dept == 'Marketing Department'){echo 'selected'; }?>>Marketing Dept</option>
-												<option value="Production Department" <?php if($dept == 'Production Department'){echo 'selected'; }?>>Production Dept</option>
-												<option value="R n D Department" <?php if($dept == 'R n D Department'){echo 'selected'; }?>>R&D Dept</option>
-												<option value="QA Department" <?php if($dept == 'QA Department'){echo 'selected'; }?>>QA Dept</option>
-												<option value="SCM Department" <?php if($dept == 'SCM Department'){echo 'selected'; }?>>SCM Dept</option>
-												<option value="General" <?php if($dept == 'General'){echo 'selected'; }?>>General</option>
+											<select id="dept" style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" name="dept">
+												<option value="" selected disabled>-- Select Department --</option>
+												<option value="ACC" <?php echo $dept == 'ACC'? 'selected':'';?>>Accounting and Finance</option>
+												<option value="GEN" <?php echo $dept == 'GEN'? 'selected':'';?>>General</option>
+												<option value="HR" <?php echo $dept == 'HR'? 'selected':'';?>>Human Resource Division</option>
+												<option value="IT" <?php echo $dept == 'IT'? 'selected':'';?>>Information & Technology</option>
+												<option value="MRK" <?php echo $dept == 'MRK'? 'selected':'';?>>Marketing</option>
+												<option value="PRD" <?php echo $dept == 'PRD'? 'selected':'';?>>Production</option>
+												<option value="QA" <?php echo $dept == 'QA'? 'selected':'';?>>Quality Assurance</option>
+												<option value="RND" <?php echo $dept == 'RND'? 'selected':'';?>>Research and Development</option>
+											</select>
+										</div>
+										<div style="width:100%;float:left">
+											<label style="width:90%;float:left;text-align:left;margin-top:10px; margin-right:10px;">Position*</label>
+											<select id="position" name="position" style="width:90%;float:left;margin:5px 0px;padding:7px;border:1px solid #ccc;" type="text" name="dept">
+												<option value="" selected disabled>-- Select Job Position --</option>
 											</select>
 										</div>
 										<div style="width:100%;float:left">
